@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jídelní lístek – Pub Podzemi</title>
-  <meta name="description" content="Jídelní lístek pivnice Pub Podzemi, Údolní 222/5, Brno.">
+  <title data-en="Food menu – Pub Podzemi">Jídelní lístek – Pub Podzemi</title>
+  <meta name="description" content="Jídelní lístek pivnice Pub Podzemi, Údolní 222/5, Brno." data-en-content="Food menu of Pub Podzemi, Údolní 222/5, Brno.">
   <link rel="icon" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,76 +15,82 @@
 
 <header class="nav" id="top">
   <div class="wrap nav__inner">
-    <a href="index.html" class="logo"><img src="img/logo.png" alt="" class="logo__img">Pub <span>Podzemi</span></a>
-    <button class="nav__toggle" aria-label="Otevřít menu" aria-expanded="false">☰</button>
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="" class="logo__img"><span class="logo__text">Pub <span>Podzemi</span></span></a>
     <nav class="nav__links">
-      <a href="index.html#o-nas">O nás</a>
-      <a href="index.html#nabidka">Nabídka</a>
-      <a href="index.html#galerie">Galerie</a>
-      <a href="index.html#oteviraci-doba">Otevírací doba</a>
-      <a href="index.html#kontakt">Kontakt</a>
-      <a href="tel:+420602211362" class="btn btn--small">Rezervace</a>
+      <a href="jidelni-listek.html" data-en="Food" aria-current="page">Jídlo</a>
+      <a href="napojovy-listek.html" data-en="Drinks">Nápoje</a>
+      <a href="index.html#galerie" data-en="Gallery">Galerie</a>
+      <a href="index.html#o-nas" data-en="About us">O nás</a>
+      <a href="index.html#kontakt" data-en="Contact">Kontakt</a>
     </nav>
+    <div class="nav__right">
+      <div class="lang" role="group" aria-label="Jazyk" data-en-aria-label="Language">
+        <button type="button" class="lang__btn" data-lang="cs">CZ</button>
+        <button type="button" class="lang__btn" data-lang="en">EN</button>
+      </div>
+      <a href="tel:+420602211362" class="btn btn--small js-reserve" data-en="Book a table">Rezervace</a>
+      <button type="button" class="nav__toggle" aria-label="Otevřít menu" data-en-aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
   </div>
 </header>
 
 <main class="listek">
   <div class="wrap">
-    <a href="index.html#nabidka" class="back">← Zpět na hlavní stránku</a>
-    <p class="eyebrow">Nabídka</p>
-    <h1 class="listek__title">Jídelní lístek</h1>
-    <p class="listek__lead">Poctivé jídlo k pivu i k vínu. Pečivo z řemeslné pekárny Klásek.</p>
-    <nav class="tabs" aria-label="Lístky">
-      <a href="napojovy-listek.html" class="tabs__tab">Nápojový lístek</a>
-      <a href="jidelni-listek.html" class="tabs__tab is-active" aria-current="page">Jídelní lístek</a>
+    <a href="index.html" class="back" data-en="← Back to the home page">← Zpět na hlavní stránku</a>
+    <p class="eyebrow" data-en="Menu">Nabídka</p>
+    <h1 class="listek__title" data-en="Food menu">Jídelní lístek</h1>
+    <p class="listek__lead" data-en="Honest food to go with beer and wine. Bread from the Klásek artisan bakery.">Poctivé jídlo k pivu i k vínu. Pečivo z řemeslné pekárny Klásek.</p>
+    <nav class="tabs" aria-label="Lístky" data-en-aria-label="Menus">
+      <a href="jidelni-listek.html" class="tabs__tab is-active" data-en="Food menu" aria-current="page">Jídelní lístek</a>
+      <a href="napojovy-listek.html" class="tabs__tab" data-en="Drinks menu">Nápojový lístek</a>
     </nav>
     <div class="listek__grid">
       <section class="cat">
-        <h2 class="cat__title">K pivu doporučujeme</h2>
+        <h2 class="cat__title" data-en="Goes well with beer">K pivu doporučujeme</h2>
         <ul class="items">
-          <li class="item"><span class="item__main"><span class="item__name">Cyrilovy pekařské tyčky solené</span></span><span class="item__price">45 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">Cyrilovy brambůrky</span><span class="item__note">solené nebo hořčicové</span></span><span class="item__price">59 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">Pikantní utopenec se zelím</span></span><span class="item__price">109 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">Domácí paštika</span><span class="item__note">dle denní nabídky</span></span><span class="item__price">119 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">Pivní sláma s dipem</span></span><span class="item__price">89 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Cyril&#x27;s salted bakery sticks">Cyrilovy pekařské tyčky solené</span></span><span class="item__price" data-en="CZK 45">45 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Cyril&#x27;s crisps">Cyrilovy brambůrky</span><span class="item__note" data-en="salted or mustard">solené nebo hořčicové</span></span><span class="item__price" data-en="CZK 59">59 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Spicy pickled sausage (utopenec) with cabbage">Pikantní utopenec se zelím</span></span><span class="item__price" data-en="CZK 109">109 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Homemade pâté">Domácí paštika</span><span class="item__note" data-en="daily offer">dle denní nabídky</span></span><span class="item__price" data-en="CZK 119">119 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Crispy beer straws with dip">Pivní sláma s dipem</span></span><span class="item__price" data-en="CZK 89">89 Kč</span></li>
         </ul>
       </section>
       <section class="cat">
-        <h2 class="cat__title">Obložené chleby</h2><p class="cat__sub">na vyžádání i půlka krajíce za poloviční cenu</p>
+        <h2 class="cat__title" data-en="Open sandwiches">Obložené chleby</h2><p class="cat__sub" data-en="half a slice available on request at half price">na vyžádání i půlka krajíce za poloviční cenu</p>
         <ul class="items">
-          <li class="item"><span class="item__main"><span class="item__name">Se škvarkovou pomazánkou</span></span><span class="item__price">89 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">S pikantní masovou pomazánkou</span></span><span class="item__price">89 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">S tvarůžkovou pomazánkou</span></span><span class="item__price">99 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">S roastbeefem</span></span><span class="item__price">159 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="With pork crackling spread">Se škvarkovou pomazánkou</span></span><span class="item__price" data-en="CZK 89">89 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="With spicy meat spread">S pikantní masovou pomazánkou</span></span><span class="item__price" data-en="CZK 89">89 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="With Olomouc tvarůžky cheese spread">S tvarůžkovou pomazánkou</span></span><span class="item__price" data-en="CZK 99">99 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="With roast beef">S roastbeefem</span></span><span class="item__price" data-en="CZK 159">159 Kč</span></li>
         </ul>
       </section>
       <section class="cat">
-        <h2 class="cat__title">Teplá kuchyně</h2><p class="cat__sub">ke všem pokrmům podáváme pečivo z řemeslné pekárny Klásek</p>
+        <h2 class="cat__title" data-en="Hot dishes">Teplá kuchyně</h2><p class="cat__sub" data-en="all dishes are served with bread from the Klásek artisan bakery">ke všem pokrmům podáváme pečivo z řemeslné pekárny Klásek</p>
         <ul class="items">
-          <li class="item"><span class="item__main"><span class="item__name">Hovězí guláš s pečivem</span></span><span class="item__price">189 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">Domácí burger</span><span class="item__note">dle denní nabídky</span></span><span class="item__price">189 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">Bůček Podzemi s limetkovou mayo a pečivem</span></span><span class="item__price">179 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Beef goulash with bread">Hovězí guláš s pečivem</span></span><span class="item__price" data-en="CZK 189">189 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Homemade burger">Domácí burger</span><span class="item__note" data-en="daily offer">dle denní nabídky</span></span><span class="item__price" data-en="CZK 189">189 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Podzemi pork belly with lime mayo and bread">Bůček Podzemi s limetkovou mayo a pečivem</span></span><span class="item__price" data-en="CZK 179">179 Kč</span></li>
         </ul>
       </section>
       <section class="cat">
-        <h2 class="cat__title">K vínu doporučujeme</h2>
+        <h2 class="cat__title" data-en="Goes well with wine">K vínu doporučujeme</h2>
         <ul class="items">
-          <li class="item"><span class="item__main"><span class="item__name">Řecké olivy v misce</span><span class="item__note">zelené s česnekem a citrónem, Kalamata nebo speciální pečené olivy</span></span><span class="item__price">89 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">Řecké olivy s domácí focaccií a olivovým olejem</span><span class="item__note">zelené s česnekem a citrónem, Kalamata nebo speciální pečené olivy</span></span><span class="item__price">109 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">Mix nakládaných sýrů</span><span class="item__note">pro 2 osoby · gouda, hermelín, čedar, sušená rajčata, olivy, česnek</span></span><span class="item__price">189 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">Salát Caprese s focaccií</span></span><span class="item__price">189 Kč</span></li>
-          <li class="item"><span class="item__main"><span class="item__name">Domácí plněná focaccia</span><span class="item__note">dle denní nabídky</span></span><span class="item__price">189 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Greek olives in a bowl">Řecké olivy v misce</span><span class="item__note" data-en="green with garlic and lemon, Kalamata or special roasted olives">zelené s česnekem a citrónem, Kalamata nebo speciální pečené olivy</span></span><span class="item__price" data-en="CZK 89">89 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Greek olives with homemade focaccia and olive oil">Řecké olivy s domácí focaccií a olivovým olejem</span><span class="item__note" data-en="green with garlic and lemon, Kalamata or special roasted olives">zelené s česnekem a citrónem, Kalamata nebo speciální pečené olivy</span></span><span class="item__price" data-en="CZK 109">109 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Marinated cheese selection">Mix nakládaných sýrů</span><span class="item__note" data-en="for 2 people · gouda, Hermelín, cheddar, sun-dried tomatoes, olives, garlic">pro 2 osoby · gouda, hermelín, čedar, sušená rajčata, olivy, česnek</span></span><span class="item__price" data-en="CZK 189">189 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Caprese salad with focaccia">Salát Caprese s focaccií</span></span><span class="item__price" data-en="CZK 189">189 Kč</span></li>
+          <li class="item"><span class="item__main"><span class="item__name" data-en="Homemade filled focaccia">Domácí plněná focaccia</span><span class="item__note" data-en="daily offer">dle denní nabídky</span></span><span class="item__price" data-en="CZK 189">189 Kč</span></li>
         </ul>
       </section>
     </div>
-    <p class="listek__note">Ceny jsou uvedeny v Kč. Alergeny na vyžádání u obsluhy.</p>
+    <p class="listek__note" data-en="Prices are in Czech crowns (CZK). Ask our staff for allergen information.">Ceny jsou uvedeny v Kč. Alergeny na vyžádání u obsluhy.</p>
   </div>
 </main>
 
 <footer class="footer">
   <div class="wrap footer__inner">
-    <span class="logo"><img src="img/logo.png" alt="" class="logo__img">Pub <span>Podzemi</span></span>
-    <span>Provozovatel: Podnebi s.r.o. · IČ 04577949 · Údolní 222/5, 602 00 Brno</span>
+    <span class="logo"><img src="img/logo.png" alt="" class="logo__img"><span class="logo__text">Pub <span>Podzemi</span></span></span>
+    <span data-en="Operator: Podnebi s.r.o. · Company ID 04577949 · Údolní 222/5, 602 00 Brno">Provozovatel: Podnebi s.r.o. · IČ 04577949 · Údolní 222/5, 602 00 Brno</span>
     <span>© <span class="year"></span></span>
   </div>
 </footer>
