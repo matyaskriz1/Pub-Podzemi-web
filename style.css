@@ -42,7 +42,8 @@ p + p { margin-top: .9rem; }
 /* Nav */
 .nav { position: fixed; inset: 0 0 auto; z-index: 10; background: rgba(253, 251, 247, .9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-.logo { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; text-decoration: none; color: var(--ink); }
+.logo { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; text-decoration: none; color: var(--ink); }
+.logo__img { height: 46px; width: auto; }
 .logo span { color: var(--accent); }
 .nav__links { display: flex; align-items: center; gap: 1.8rem; }
 .nav__links a:not(.btn) { text-decoration: none; font-size: .95rem; color: var(--muted); transition: color .2s; }
@@ -52,6 +53,9 @@ p + p { margin-top: .9rem; }
 /* Hero */
 .hero { padding: 132px 0 clamp(56px, 8vw, 88px); background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%); }
 .hero__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+.hero__brand { display: flex; align-items: center; gap: clamp(16px, 2.5vw, 28px); }
+.hero__logo { height: clamp(96px, 11vw, 140px); width: auto; flex-shrink: 0; }
+.hero__brand .eyebrow { margin-bottom: .4rem; }
 .hero__lead { font-size: clamp(1.1rem, 1.8vw, 1.3rem); color: var(--muted); max-width: 30ch; margin: 1.1rem 0 2rem; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .8rem; }
 .hero__photo { position: relative; }
@@ -77,13 +81,16 @@ a.quick__value:hover { color: var(--accent); }
 
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: clamp(56px, 8vw, 88px); }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; }
-.card__icon { display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: var(--accent-soft); font-size: 1.5rem; }
+.card__icon { display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: var(--accent-soft); color: var(--accent-hover); }
+.card__icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .card h3 { margin-top: 1rem; }
 .card p { color: var(--muted); font-size: .97rem; }
 
 /* Menu */
 .menu { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 1.6rem; }
-.menu__item { display: flex; flex-direction: column; gap: .4rem; padding: 34px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); text-decoration: none; transition: border-color .2s, transform .2s, box-shadow .2s; }
+.menu__item { display: flex; flex-direction: column; overflow: hidden; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); text-decoration: none; transition: border-color .2s, transform .2s, box-shadow .2s; }
+.menu__img { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: var(--line); }
+.menu__body { display: flex; flex-direction: column; gap: .4rem; padding: 28px 32px 32px; }
 .menu__item:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
 .menu__title { font-family: var(--font-display); font-size: 1.6rem; }
 .menu__desc { color: var(--muted); }
@@ -110,6 +117,29 @@ a.quick__value:hover { color: var(--accent); }
 .footer { background: var(--bg-alt); color: var(--muted); padding: 36px 0; font-size: .88rem; border-top: 1px solid var(--line); }
 .footer__inner { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
 
+/* Menu pages (lístky) */
+.listek { padding: 120px 0 clamp(72px, 10vw, 120px); background: linear-gradient(180deg, var(--bg-alt) 0, var(--bg) 360px); }
+.back { display: inline-block; color: var(--muted); text-decoration: none; font-size: .92rem; margin-bottom: 1.6rem; }
+.back:hover { color: var(--ink); }
+.listek__title { font-size: clamp(2.4rem, 5.5vw, 3.8rem); }
+.listek__lead { color: var(--muted); max-width: 52ch; margin-top: .8rem; font-size: 1.1rem; }
+.tabs { display: inline-flex; gap: 4px; padding: 4px; margin: 2rem 0 2.4rem; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
+.tabs__tab { padding: .6rem 1.3rem; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: .95rem; color: var(--muted); transition: background .2s, color .2s; }
+.tabs__tab:hover { color: var(--ink); }
+.tabs__tab.is-active { background: var(--accent); color: #fff; }
+.listek__grid { columns: 2; column-gap: 22px; }
+.cat { break-inside: avoid; display: inline-block; width: 100%; margin-bottom: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 30px 18px; }
+.cat__title { font-size: 1.55rem; margin-bottom: .2rem; }
+.cat__sub { color: var(--accent-hover); font-size: .88rem; margin-bottom: .2rem; }
+.items { list-style: none; margin-top: .8rem; }
+.item { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: .7rem 0; border-top: 1px dashed var(--line); }
+.item:first-child { border-top: 0; }
+.item__main { display: flex; flex-direction: column; }
+.item__name { font-weight: 500; }
+.item__note { color: var(--muted); font-size: .86rem; line-height: 1.45; }
+.item__price { font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.listek__note { color: var(--muted); font-size: .9rem; margin-top: 1rem; }
+
 /* Responsive */
 @media (max-width: 900px) {
   .nav__toggle { display: block; }
@@ -124,6 +154,10 @@ a.quick__value:hover { color: var(--accent); }
   .quick li:nth-child(3) { border-left: 0; }
   .quick li:nth-child(n+3) { border-top: 1px solid var(--line); }
   .gallery { grid-template-columns: 1fr 1fr; }
+  .listek { padding-top: 96px; }
+  .listek__grid { columns: 1; }
+  .cat { padding: 22px 20px 12px; }
+  .logo__img { height: 40px; }
 }
 @media (max-width: 480px) {
   .quick { grid-template-columns: 1fr; }

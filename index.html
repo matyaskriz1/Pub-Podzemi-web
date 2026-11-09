@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pub Podzemi – pivnice v centru Brna pod Špilberkem</title>
   <meta name="description" content="Pivnice Pub Podzemi v Brně, Údolní 5. Plzeň, Radegast a speciály z pivovaru Kosmix, kvalitní vína a poctivá kuchyně. Otevřeno denně 15:00–01:00.">
+  <link rel="icon" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
 
 <header class="nav" id="top">
   <div class="wrap nav__inner">
-    <a href="#top" class="logo">Pub <span>Podzemi</span></a>
+    <a href="#top" class="logo"><img src="img/logo.png" alt="" class="logo__img">Pub <span>Podzemi</span></a>
     <button class="nav__toggle" aria-label="Otevřít menu" aria-expanded="false">☰</button>
     <nav class="nav__links">
       <a href="#o-nas">O nás</a>
@@ -30,8 +31,13 @@
 <section class="hero">
   <div class="wrap hero__grid">
     <div class="hero__text">
-      <p class="eyebrow">Pivnice · Brno-město · pod Špilberkem</p>
-      <h1>Pub Podzemi</h1>
+      <div class="hero__brand">
+        <img src="img/logo.png" alt="Logo Pub Podzemi" class="hero__logo">
+        <div>
+          <p class="eyebrow">Pivnice · Brno-město · pod Špilberkem</p>
+          <h1>Pub Podzemi</h1>
+        </div>
+      </div>
       <p class="hero__lead">Skvěle načepované pivo, kvalitní vína a výborná kuchyně.</p>
       <div class="hero__actions">
         <a href="tel:+420602211362" class="btn">Rezervovat stůl</a>
@@ -39,7 +45,7 @@
       </div>
     </div>
     <figure class="hero__photo">
-      <img src="https://cdn.website.dish.co/media/8a/6c/9804396/Pub-pod-zemi-IMG-8990-JPG.jpg" alt="Pivnice Pub Podzemi">
+      <img src="img/bar.jpg" alt="Bar a interiér pivnice Pub Podzemi">
       <figcaption class="hero__badge">
         <span class="hero__badge-dot"></span>
         Otevřeno denně <strong>15:00 – 01:00</strong>
@@ -77,22 +83,28 @@
       <p>Vítejte v pivnici Pub Podzemi, která se nachází v krásném Brně-městě přímo v centru pod hradem Špilberk.</p>
       <p>Nenechte se zmást názvem, nejde o žádný sklep. Naopak – vsadili jsme na vzdušnou pivnici s možností plného otevření výloh do nově zrekonstruované ulice. V letních měsících tak hosté ocení příjemné propojení interiéru s venkovním prostředím i plánovanou zahrádku přímo před podnikem.</p>
     </div>
-    <img class="split__img" src="https://cdn.website.dish.co/media/e9/4a/9804437/Pub-pod-zemi-IMG-8994-jpg.jpg" alt="Interiér pivnice Pub Podzemi" loading="lazy">
+    <img class="split__img" src="img/interier.jpg" alt="Interiér pivnice Pub Podzemi" loading="lazy">
   </div>
 
   <div class="wrap cards">
     <article class="card">
-      <span class="card__icon">🍺</span>
+      <span class="card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 8h10v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8Z"/><path d="M15 10h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><path d="M5 8a2.5 2.5 0 0 1 2-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 3 4"/><path d="M8.5 12v5M11.5 12v5"/></svg>
+      </span>
       <h3>Pivní speciály i drinky</h3>
       <p>Na čepu máme Plzeň a Radka doplněné o speciály z pivovaru Kosmix. Nechybí ani Prosecco a výběr kvalitních rozlévaných i lahvových vín. V letních horkých dnech ocení hosté i míchané drinky.</p>
     </article>
     <article class="card">
-      <span class="card__icon">🍽️</span>
+      <span class="card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 2 2v9"/><path d="M10 3v7a2 2 0 0 1-2 2"/><path d="M8 3v6"/><path d="M17 21V3c-2 1-3 4-3 8h3"/></svg>
+      </span>
       <h3>Něco na zub</h3>
       <p>Luxusní pečený bůček šmrncnutý asijskými chutěmi, poctivý hovězí guláš, kachní rillettes či domácí focaccia. Nechybí ani klasické obložené chleby ideální k pivku.</p>
     </article>
     <article class="card">
-      <span class="card__icon">🏛️</span>
+      <span class="card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 18h16"/><path d="M6 18v-7M10 18v-7M14 18v-7M18 18v-7"/><path d="M3 9 12 4l9 5H3Z"/></svg>
+      </span>
       <h3>Tradice pokračuje</h3>
       <p>Autorem interiéru je stejně jako v případě našeho Cafe Podnebi architekt Tomáš Pavlovský. Nový podnik navazuje na dlouholetou tradici a přináší svěží gastronomický zážitek.</p>
     </article>
@@ -104,15 +116,21 @@
     <p class="eyebrow">Nabídka</p>
     <h2>Co si dáte?</h2>
     <div class="menu">
-      <a class="menu__item" href="https://cdn.website.dish.co/media/9b/34/9891434/Napojovy-listek.pdf" target="_blank" rel="noopener">
-        <span class="menu__title">Nápojový lístek</span>
-        <span class="menu__desc">Plzeň, Radegast, speciály Kosmix, vína, Prosecco, drinky</span>
-        <span class="menu__cta">Otevřít PDF →</span>
+      <a class="menu__item" href="napojovy-listek.html">
+        <img src="img/chleby-pivo.jpg" alt="" class="menu__img" loading="lazy">
+        <span class="menu__body">
+          <span class="menu__title">Nápojový lístek</span>
+          <span class="menu__desc">Plzeň, Radegast, speciály Kosmix, vína, Prosecco, drinky</span>
+          <span class="menu__cta">Zobrazit nápoje →</span>
+        </span>
       </a>
-      <a class="menu__item" href="https://cdn.website.dish.co/media/1a/01/10191099/Jidelni-listek.pdf" target="_blank" rel="noopener">
-        <span class="menu__title">Jídelní lístek</span>
-        <span class="menu__desc">Bůček Podzemi, guláš, kachní rillettes, focaccia, chleby</span>
-        <span class="menu__cta">Otevřít PDF →</span>
+      <a class="menu__item" href="jidelni-listek.html">
+        <img src="img/prkenko.jpg" alt="" class="menu__img" loading="lazy">
+        <span class="menu__body">
+          <span class="menu__title">Jídelní lístek</span>
+          <span class="menu__desc">Bůček Podzemi, guláš, obložené chleby, olivy, focaccia</span>
+          <span class="menu__cta">Zobrazit jídla →</span>
+        </span>
       </a>
     </div>
   </div>
@@ -123,12 +141,12 @@
     <p class="eyebrow">Galerie</p>
     <h2>Nahlédněte k nám</h2>
     <div class="gallery">
-      <img src="https://cdn.website.dish.co/media/ef/93/9804400/Pub-pod-zemi-IMG-8960-jpg.jpg" alt="Pub Podzemi" loading="lazy">
-      <img src="https://cdn.website.dish.co/media/85/69/9804416/Pub-pod-zemi-IMG-8962-jpg.jpg" alt="Pub Podzemi" loading="lazy">
-      <img src="https://cdn.website.dish.co/media/a2/aa/9804426/Pub-pod-zemi-IMG-8995-jpg.jpg" alt="Pub Podzemi" loading="lazy">
-      <img src="https://cdn.website.dish.co/media/65/13/9804387/Pub-pod-zemi-IMG-8957-jpeg.jpg" alt="Pub Podzemi" loading="lazy">
-      <img src="https://cdn.website.dish.co/media/e9/05/9804421/Pub-pod-zemi-IMG-8940-jpeg.jpg" alt="Pub Podzemi" loading="lazy">
-      <img src="https://cdn.website.dish.co/media/8a/6c/9804396/Pub-pod-zemi-IMG-8990-JPG.jpg" alt="Pub Podzemi" loading="lazy">
+      <img src="img/interier-2.jpg" alt="Bar a sál pivnice" loading="lazy">
+      <img src="img/chleby-pivo.jpg" alt="Obložené chleby a pivo" loading="lazy">
+      <img src="img/prkenko.jpg" alt="Prkénko s paštikou a pečivem" loading="lazy">
+      <img src="img/chleby-2.jpg" alt="Obložené chleby s pomazánkami" loading="lazy">
+      <img src="img/interier.jpg" alt="Interiér pivnice" loading="lazy">
+      <img src="img/chleby.jpg" alt="Obložené chleby a točené pivo" loading="lazy">
     </div>
   </div>
 </section>
@@ -178,7 +196,7 @@
       </p>
       <div class="hero__actions">
         <a href="tel:+420602211362" class="btn">Zavolat a rezervovat</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=%C3%9Adoln%C3%AD%20222%2F5%2C%20602%2000%20Brno" class="btn btn--ghost-dark" target="_blank" rel="noopener">Navigovat</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%C3%9Adoln%C3%AD%20222%2F5%2C%20602%2000%20Brno" class="btn btn--ghost" target="_blank" rel="noopener">Navigovat</a>
       </div>
     </div>
     <iframe class="map" title="Mapa – Údolní 222/5, Brno" loading="lazy"
@@ -188,17 +206,12 @@
 
 <footer class="footer">
   <div class="wrap footer__inner">
-    <span class="logo">Pub <span>Podzemi</span></span>
+    <span class="logo"><img src="img/logo.png" alt="" class="logo__img">Pub <span>Podzemi</span></span>
     <span>Provozovatel: Podnebi s.r.o. · IČ 04577949 · Údolní 222/5, 602 00 Brno</span>
-    <span>© <span id="year"></span></span>
+    <span>© <span class="year"></span></span>
   </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const t = document.querySelector('.nav__toggle'), l = document.querySelector('.nav__links');
-  t.addEventListener('click', () => { const o = l.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
-  l.querySelectorAll('a').forEach(a => a.addEventListener('click', () => l.classList.remove('open')));
-</script>
+<script src="main.js"></script>
 </body>
 </html>
