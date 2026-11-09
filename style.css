@@ -17,6 +17,7 @@
   --amber-dark: #b27616;
   --display: "Big Shoulders Display", "Arial Narrow", sans-serif;
   --body: "Instrument Sans", system-ui, sans-serif;
+  --brand: "Fraunces", Georgia, serif;   /* písmo názvu Pub Podzemi */
   --arch: 999px 999px 0 0 / 46% 46% 0 0;
 }
 
@@ -52,7 +53,8 @@ p + p { margin-top: .9rem; }
 .nav__inner { display: flex; align-items: center; gap: clamp(20px, 3vw, 44px); height: 68px; }
 .logo { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--ink); }
 .logo__img { height: 44px; width: auto; }
-.logo__text { font-family: var(--display); font-weight: 500; font-size: 1.7rem; letter-spacing: .01em; }
+.logo__text { font-family: var(--brand); font-weight: 700; font-size: 1.35rem; letter-spacing: -.005em; }
+.logo__text span { color: var(--gold); }
 .nav__links { display: flex; align-items: center; gap: 1.5rem; }
 .nav__links a { text-decoration: none; font-weight: 500; font-size: .98rem; color: var(--muted); padding: .3rem 0; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
 .nav__links a:hover { color: var(--ink); }
@@ -82,7 +84,7 @@ p + p { margin-top: .9rem; }
   linear-gradient(180deg, rgba(10,10,10,.5) 0%, rgba(10,10,10,0) 20%, rgba(10,10,10,0) 70%, rgba(10,10,10,.55) 100%); }
 .hero__content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding: 110px 0 90px; }
 .hero__logo { height: clamp(72px, 9vw, 104px); width: auto; background: var(--white); padding: 8px 10px; border-radius: 4px; margin-bottom: 1.2rem; }
-.hero h1 { text-transform: none; font-weight: 500; font-size: clamp(3.6rem, 10vw, 8rem); line-height: .95; letter-spacing: .005em; text-shadow: 0 6px 40px rgba(0,0,0,.35); }
+.hero h1 { font-family: var(--brand); text-transform: none; font-weight: 500; font-size: clamp(3.2rem, 9vw, 7rem); line-height: 1; letter-spacing: -.01em; text-shadow: 0 6px 40px rgba(0,0,0,.35); }
 .hero__lead { font-size: clamp(1.1rem, 1.8vw, 1.35rem); max-width: 40ch; margin: 1.2rem auto 1.8rem; color: rgba(255,255,255,.92); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 .hero .hero__actions { justify-content: center; }
