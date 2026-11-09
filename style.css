@@ -70,6 +70,7 @@ p + p { margin-top: .9rem; }
 .hero .hero__actions { justify-content: center; }
 .hero__badge { display: inline-flex; align-items: center; gap: .6rem; margin-top: 2rem; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(6px); padding: .6rem 1.1rem; border-radius: 999px; font-size: .92rem; white-space: nowrap; }
 .hero__badge-dot { width: 9px; height: 9px; border-radius: 50%; background: #4cc25c; box-shadow: 0 0 0 4px rgba(76,194,92,.25); }
+.hero__badge.is-closed .hero__badge-dot { background: #e5484d; box-shadow: 0 0 0 4px rgba(229,72,77,.28); }
 .hero__scroll { position: absolute; z-index: 1; bottom: 22px; left: 50%; transform: translateX(-50%); width: 44px; height: 44px; display: grid; place-items: center; color: #fff; border-radius: 50%; border: 1px solid rgba(255,255,255,.45); animation: bob 2s ease-in-out infinite; }
 .hero__scroll svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 @keyframes bob { 50% { transform: translate(-50%, 6px); } }

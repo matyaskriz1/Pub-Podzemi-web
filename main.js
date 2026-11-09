@@ -183,3 +183,32 @@ if (navEl) {
   if (links) links.addEventListener('click', () => setTimeout(updateNav, 0));
   updateNav();
 }
+
+/* ---------- Otevřeno / zavřeno podle aktuálního českého času ---------- */
+// Otevírací doba: každý den 15:00 – 01:00.
+const OPEN_HOUR = 15, CLOSE_HOUR = 1;
+const statusEl = document.getElementById('open-status');
+
+function pragueHour() {
+  const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Prague', hour: '2-digit', hour12: false })
+    .formatToParts(new Date());
+  return Number(parts.find(p => p.type === 'hour').value) % 24;
+}
+
+function renderOpenStatus() {
+  if (!statusEl) return;
+  const h = pragueHour();
+  const open = h >= OPEN_HOUR || h < CLOSE_HOUR;
+  const text = statusEl.querySelector('.hero__badge-text');
+  const msg = {
+    cs: open ? 'Právě otevřeno · <strong>do 01:00</strong>' : 'Právě zavřeno · <strong>otevíráme v 15:00</strong>',
+    en: open ? 'Open now · <strong>until 1 am</strong>' : 'Closed now · <strong>opens at 3 pm</strong>'
+  };
+  statusEl.classList.toggle('is-closed', !open);
+  // Uložíme obě jazykové verze, aby je přepínač jazyka správně vystřídal.
+  text.dataset.cs = msg.cs;
+  text.dataset.en = msg.en;
+  text.innerHTML = msg[currentLang];
+}
+renderOpenStatus();
+setInterval(renderOpenStatus, 60 * 1000);
