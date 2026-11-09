@@ -184,10 +184,10 @@ if (navEl) {
   updateNav();
 }
 
-/* ---------- Otevřeno / zavřeno podle aktuálního českého času ---------- */
+/* ---------- Otevřeno / zavřeno: malé okénko v rohu podle českého času ---------- */
 // Otevírací doba: každý den 15:00 – 01:00.
 const OPEN_HOUR = 15, CLOSE_HOUR = 1;
-const statusEl = document.getElementById('open-status');
+const TOAST_KEY = 'pubpodzemi-status-closed';
 
 function pragueHour() {
   const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Prague', hour: '2-digit', hour12: false })
@@ -195,20 +195,37 @@ function pragueHour() {
   return Number(parts.find(p => p.type === 'hour').value) % 24;
 }
 
+const toast = document.createElement('div');
+toast.className = 'status-toast';
+toast.setAttribute('role', 'status');
+toast.innerHTML = `
+  <span class="status-toast__dot"></span>
+  <span class="status-toast__text"></span>
+  <button type="button" class="status-toast__close" aria-label="Zavřít" data-en-aria-label="Close">×</button>`;
+document.body.appendChild(toast);
+const toastText = toast.querySelector('.status-toast__text');
+
 function renderOpenStatus() {
-  if (!statusEl) return;
   const h = pragueHour();
   const open = h >= OPEN_HOUR || h < CLOSE_HOUR;
-  const text = statusEl.querySelector('.hero__badge-text');
   const msg = {
-    cs: open ? 'Právě otevřeno, <strong>do 01:00</strong>' : 'Právě zavřeno, <strong>otevíráme v 15:00</strong>',
-    en: open ? 'Open now, <strong>until 1 am</strong>' : 'Closed now, <strong>opens at 3 pm</strong>'
+    cs: open ? 'Právě otevřeno, do 01:00' : 'Právě zavřeno, otevíráme v 15:00',
+    en: open ? 'Open now, until 1 am' : 'Closed now, opens at 3 pm'
   };
-  statusEl.classList.toggle('is-closed', !open);
-  // Uložíme obě jazykové verze, aby je přepínač jazyka správně vystřídal.
-  text.dataset.cs = msg.cs;
-  text.dataset.en = msg.en;
-  text.innerHTML = msg[currentLang];
+  toast.classList.toggle('is-closed', !open);
+  // Obě jazykové verze, aby je přepínač jazyka správně vystřídal.
+  toastText.dataset.cs = msg.cs;
+  toastText.dataset.en = msg.en;
+  toastText.textContent = msg[currentLang];
 }
 renderOpenStatus();
+applyLang(currentLang);
 setInterval(renderOpenStatus, 60 * 1000);
+
+let toastDismissed = false;
+try { toastDismissed = sessionStorage.getItem(TOAST_KEY) === '1'; } catch (e) { /* nic */ }
+if (!toastDismissed) setTimeout(() => toast.classList.add('is-visible'), 1200);
+toast.querySelector('.status-toast__close').addEventListener('click', () => {
+  toast.classList.remove('is-visible');
+  try { sessionStorage.setItem(TOAST_KEY, '1'); } catch (e) { /* nic */ }
+});
