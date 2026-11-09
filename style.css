@@ -13,6 +13,8 @@
   --line: #d9d5cb;
   --gold: #b89f2e;         /* zlatá z loga */
   --gold-ink: #7a6a1c;     /* tmavší zlatá pro čitelný text */
+  --amber: #c8891f;        /* rezervační tlačítka */
+  --amber-dark: #b27616;
   --display: "Big Shoulders Display", "Arial Narrow", sans-serif;
   --body: "Instrument Sans", system-ui, sans-serif;
   --arch: 999px 999px 0 0 / 46% 46% 0 0;
@@ -39,9 +41,9 @@ p + p { margin-top: .9rem; }
 .btn--small { padding: .5rem 1rem; font-size: .92rem; }
 .btn--ghost { background: transparent; color: var(--ink); }
 .btn--ghost:hover { background: var(--ink); color: var(--white); }
-/* Rezervační tlačítka – všechna stejná, ve zlaté z loga */
-.btn--reserve { background: var(--gold); border-color: var(--gold); color: var(--ink); }
-.btn--reserve:hover { background: #cdb243; border-color: #cdb243; color: var(--ink); }
+/* Rezervační tlačítka – všechna stejná, jantarová */
+.btn--reserve { background: var(--amber); border-color: var(--amber); color: var(--white); }
+.btn--reserve:hover { background: var(--amber-dark); border-color: var(--amber-dark); color: var(--white); }
 .btn--light { background: transparent; border-color: rgba(255,255,255,.85); color: var(--white); }
 .btn--light:hover { background: var(--white); color: var(--ink); border-color: var(--white); }
 
@@ -80,7 +82,7 @@ p + p { margin-top: .9rem; }
   linear-gradient(180deg, rgba(10,10,10,.5) 0%, rgba(10,10,10,0) 20%, rgba(10,10,10,0) 70%, rgba(10,10,10,.55) 100%); }
 .hero__content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding: 110px 0 90px; }
 .hero__logo { height: clamp(72px, 9vw, 104px); width: auto; background: var(--white); padding: 8px 10px; border-radius: 4px; margin-bottom: 1.2rem; }
-.hero h1 { font-size: clamp(4.2rem, 15vw, 12rem); line-height: .86; letter-spacing: -.005em; text-shadow: 0 6px 40px rgba(0,0,0,.35); }
+.hero h1 { text-transform: none; font-size: clamp(4.2rem, 15vw, 12rem); line-height: .86; letter-spacing: -.005em; text-shadow: 0 6px 40px rgba(0,0,0,.35); }
 .hero__lead { font-size: clamp(1.1rem, 1.8vw, 1.35rem); max-width: 40ch; margin: 1.2rem auto 1.8rem; color: rgba(255,255,255,.92); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 .hero .hero__actions { justify-content: center; }
