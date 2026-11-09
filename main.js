@@ -170,3 +170,16 @@ window.addEventListener('load', () => { if (!userScrolled) initialScroll(); });
 
 /* ---------- Rok v patičce ---------- */
 document.querySelectorAll('.year').forEach(el => { el.textContent = new Date().getFullYear(); });
+
+/* ---------- Menu přes úvodní fotku: průhledné nahoře, plné po odrolování ---------- */
+const navEl = document.querySelector('.nav--overlay');
+if (navEl) {
+  const updateNav = () => {
+    const menuOpen = links && links.classList.contains('open');
+    navEl.classList.toggle('is-solid', window.scrollY > 40 || menuOpen);
+  };
+  window.addEventListener('scroll', updateNav, { passive: true });
+  if (toggle) toggle.addEventListener('click', updateNav);
+  if (links) links.addEventListener('click', () => setTimeout(updateNav, 0));
+  updateNav();
+}

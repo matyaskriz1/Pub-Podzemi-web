@@ -56,22 +56,39 @@ p + p { margin-top: .9rem; }
 .nav__links a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--accent); }
 .nav__toggle { display: none; background: none; border: 0; color: var(--ink); font-size: 1.6rem; cursor: pointer; }
 
-/* Hero */
-.hero { padding: 92px 0 clamp(56px, 8vw, 88px); background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%); }
-.hero__card { position: relative; overflow: hidden; border-radius: 28px; min-height: 520px; height: min(74svh, 660px); display: flex; align-items: flex-end; box-shadow: var(--shadow); background: #3a3128; }
+/* Hero – fotka přes celou úvodní obrazovku */
+.hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #2b241d; color: #fff; text-align: center; }
 .hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hero__card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,15,10,.72) 0%, rgba(20,15,10,.45) 45%, rgba(20,15,10,.05) 100%), linear-gradient(0deg, rgba(20,15,10,.5) 0%, rgba(20,15,10,0) 50%); }
-.hero__content { position: relative; z-index: 1; color: #fff; padding: clamp(28px, 5vw, 64px); max-width: 640px; }
-.hero__logo-plate { display: inline-block; background: rgba(255,255,255,.94); padding: 10px 14px; border-radius: 14px; margin-bottom: 1.2rem; box-shadow: 0 8px 24px -10px rgba(0,0,0,.4); }
-.hero__logo { height: clamp(64px, 8vw, 92px); width: auto; display: block; }
+.hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(20,15,10,.35) 0%, rgba(20,15,10,.6) 75%), linear-gradient(180deg, rgba(20,15,10,.45) 0%, rgba(20,15,10,0) 25%, rgba(20,15,10,0) 70%, rgba(20,15,10,.55) 100%); }
+.hero__content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding: 110px 0 120px; }
+.hero__logo-plate { display: inline-block; background: rgba(255,255,255,.94); padding: 10px 14px; border-radius: 14px; margin-bottom: 1.4rem; box-shadow: 0 8px 24px -10px rgba(0,0,0,.4); }
+.hero__logo { height: clamp(70px, 9vw, 104px); width: auto; display: block; }
 .hero .eyebrow { color: #f2c46b; }
-.hero h1 { color: #fff; }
-.hero__lead { font-size: clamp(1.1rem, 1.8vw, 1.3rem); color: rgba(255,255,255,.9); max-width: 30ch; margin: .8rem 0 1.8rem; }
+.hero h1 { color: #fff; font-size: clamp(3.4rem, 11vw, 8.5rem); line-height: 1; text-shadow: 0 4px 30px rgba(0,0,0,.35); }
+.hero__lead { font-size: clamp(1.15rem, 2.2vw, 1.5rem); color: rgba(255,255,255,.92); max-width: 32ch; margin: 1.1rem auto 2rem; text-shadow: 0 2px 16px rgba(0,0,0,.4); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .8rem; }
-.hero__badge { position: absolute; z-index: 1; right: clamp(16px, 3vw, 32px); top: clamp(16px, 3vw, 32px); display: flex; align-items: center; gap: .6rem; background: var(--surface); padding: .7rem 1.1rem; border-radius: 999px; box-shadow: var(--shadow); font-size: .9rem; white-space: nowrap; }
-.hero__badge-dot { width: 9px; height: 9px; border-radius: 50%; background: #3fa34d; box-shadow: 0 0 0 4px rgba(63,163,77,.18); }
+.hero .hero__actions { justify-content: center; }
+.hero__badge { display: inline-flex; align-items: center; gap: .6rem; margin-top: 2rem; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(6px); padding: .6rem 1.1rem; border-radius: 999px; font-size: .92rem; white-space: nowrap; }
+.hero__badge-dot { width: 9px; height: 9px; border-radius: 50%; background: #4cc25c; box-shadow: 0 0 0 4px rgba(76,194,92,.25); }
+.hero__scroll { position: absolute; z-index: 1; bottom: 22px; left: 50%; transform: translateX(-50%); width: 44px; height: 44px; display: grid; place-items: center; color: #fff; border-radius: 50%; border: 1px solid rgba(255,255,255,.45); animation: bob 2s ease-in-out infinite; }
+.hero__scroll svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@keyframes bob { 50% { transform: translate(-50%, 6px); } }
+@media (prefers-reduced-motion: reduce) { .hero__scroll { animation: none; } }
 .btn--light { background: rgba(255,255,255,.14); color: #fff; border-color: rgba(255,255,255,.7); backdrop-filter: blur(4px); }
 .btn--light:hover { background: #fff; color: var(--ink); border-color: #fff; }
+
+/* Pruh s informacemi pod úvodem */
+.info { padding: clamp(40px, 6vw, 64px) 0 0; }
+.info .quick { margin-top: 0; }
+
+/* Průhledné menu přes fotku (jen na úvodu, než se odroluje) */
+.nav { transition: background .25s, border-color .25s, box-shadow .25s; }
+.nav--overlay:not(.is-solid) { background: transparent; border-bottom-color: transparent; backdrop-filter: none; }
+.nav--overlay:not(.is-solid) .logo__text, .nav--overlay:not(.is-solid) .nav__links a, .nav--overlay:not(.is-solid) .nav__toggle { color: #fff; }
+.nav--overlay:not(.is-solid) .logo__img { background: rgba(255,255,255,.92); border-radius: 6px; padding: 3px; }
+.nav--overlay:not(.is-solid) .lang { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.4); }
+.nav--overlay:not(.is-solid) .lang__btn { color: rgba(255,255,255,.85); }
+.nav--overlay:not(.is-solid) .lang__btn.is-active { background: #fff; color: var(--ink); }
 
 /* Rezervační okno */
 .modal { margin: auto; width: min(460px, calc(100% - 32px)); border: 0; border-radius: 22px; padding: 32px 28px 28px; background: var(--bg); color: var(--ink); box-shadow: 0 30px 80px -20px rgba(0,0,0,.45); }
@@ -175,11 +192,10 @@ a.quick__value:hover { color: var(--accent); }
   .nav__links.open { display: flex; }
   .nav__links a { padding: .8rem 0; width: 100%; font-size: 1.05rem; }
   .nav__links a[aria-current="page"] { box-shadow: none; color: var(--accent-hover); }
-  .hero { padding-top: 84px; }
-  .hero__card { min-height: 480px; height: auto; }
-  .hero__card::after { background: linear-gradient(0deg, rgba(20,15,10,.82) 0%, rgba(20,15,10,.55) 55%, rgba(20,15,10,.15) 100%); }
-  .hero__content { padding: 120px 22px 26px; }
-  .hero__badge { right: 12px; top: 12px; font-size: .84rem; padding: .55rem .9rem; }
+  .hero__content { padding: 96px 0 96px; }
+  .hero__badge { font-size: .84rem; }
+  .nav--overlay:not(.is-solid) .nav__links.open { background: var(--bg); }
+  .nav--overlay:not(.is-solid) .nav__links.open a { color: var(--muted); }
   .split, .menu, .cards { grid-template-columns: 1fr; }
   .quick { grid-template-columns: 1fr 1fr; }
   .quick li:nth-child(3) { border-left: 0; }
