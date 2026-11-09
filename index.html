@@ -8,14 +8,14 @@
   <link rel="icon" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=7">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
 <header class="nav nav--overlay" id="top">
   <div class="wrap nav__inner">
-    <a href="index.html" class="logo"><img src="img/logo.png" alt="" class="logo__img"><span class="logo__text">Pub <span>Podzemi</span></span></a>
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="" class="logo__img"><span class="logo__text">Pub Podzemi</span></a>
     <nav class="nav__links">
       <a href="jidelni-listek.html" data-en="Food">Jídlo</a>
       <a href="napojovy-listek.html" data-en="Drinks">Nápoje</a>
@@ -37,75 +37,66 @@
 <section class="hero">
   <img class="hero__img" src="img/bar-1440.jpg" srcset="img/bar-1440.jpg 1440w, img/bar-2560.jpg 2560w" sizes="(max-aspect-ratio: 4/3) 134vh, 100vw" fetchpriority="high" alt="Bar a interiér pivnice Pub Podzemi" data-en-alt="The bar and interior of Pub Podzemi">
   <div class="wrap hero__content">
-    <span class="hero__logo-plate"><img src="img/logo.png" alt="Logo Pub Podzemi" class="hero__logo"></span>
-    <p class="eyebrow" data-en="Beer pub · Brno city centre · below Špilberk">Pivnice · Brno-město · pod Špilberkem</p>
+    <img src="img/logo.png" alt="Logo Pub Podzemi" class="hero__logo">
     <h1>Pub Podzemi</h1>
-    <p class="hero__lead" data-en="Perfectly poured beer, quality wines and great food.">Skvěle načepované pivo, kvalitní vína a výborná kuchyně.</p>
+    <p class="hero__lead" data-en="Perfectly poured beer, quality wines and great food. Right in the centre of Brno, just below Špilberk.">Skvěle načepované pivo, kvalitní vína a výborná kuchyně. V centru Brna, kousek pod Špilberkem.</p>
     <div class="hero__actions">
-      <a href="tel:+420602211362" class="btn js-reserve" data-en="Book a table">Rezervovat stůl</a>
-      <a href="#nabidka" class="btn btn--light" data-en="Food &amp; drinks">Jídlo a nápoje</a>
+      <a href="tel:+420602211362" class="btn btn--gold js-reserve" data-en="Book a table">Rezervovat stůl</a>
+      <a href="#nabidka" class="btn btn--light" data-en="See the menu">Prohlédnout lístek</a>
     </div>
-    <span class="hero__badge" id="open-status">
+    <p class="hero__badge" id="open-status">
       <span class="hero__badge-dot"></span>
-      <span class="hero__badge-text" data-en="Open daily &lt;strong&gt;3 pm – 1 am&lt;/strong&gt;">Otevřeno denně <strong>15:00 – 01:00</strong></span>
-    </span>
+      <span class="hero__badge-text" data-en="Open daily, 3 pm – 1 am">Otevřeno denně, 15:00 – 01:00</span>
+    </p>
   </div>
-  <a href="#info" class="hero__scroll" aria-label="Posunout dolů" data-en-aria-label="Scroll down"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
 </section>
 
 <section class="info" id="info">
   <div class="wrap">
-    <ul class="quick">
-      <li>
-        <span class="quick__label" data-en="Opening hours">Otevírací doba</span>
-        <span class="quick__value" data-en="Mon–Sun 3 pm – 1 am">Po–Ne 15:00 – 01:00</span>
-      </li>
-      <li>
-        <span class="quick__label" data-en="Address">Adresa</span>
-        <a class="quick__value" href="#kontakt">Údolní 222/5, Brno</a>
-      </li>
-      <li>
-        <span class="quick__label" data-en="Reservations">Rezervace</span>
-        <a class="quick__value" href="tel:+420602211362">+420 602 211 362</a>
-      </li>
-      <li>
-        <span class="quick__label" data-en="On tap">Na čepu</span>
-        <span class="quick__value">Plzeň · Radegast · Kosmix</span>
-      </li>
-    </ul>
+    <dl class="quick">
+      <div>
+        <dt data-en="Opening hours">Otevírací doba</dt>
+        <dd data-en="Every day 3 pm – 1 am">Každý den 15:00 – 01:00</dd>
+      </div>
+      <div>
+        <dt data-en="Address">Adresa</dt>
+        <dd><a href="#kontakt">Údolní 222/5, Brno</a></dd>
+      </div>
+      <div>
+        <dt data-en="Reservations">Rezervace</dt>
+        <dd><a href="tel:+420602211362">+420 602 211 362</a></dd>
+      </div>
+      <div>
+        <dt data-en="On tap">Na čepu</dt>
+        <dd>Plzeň, Radegast, Kosmix</dd>
+      </div>
+    </dl>
   </div>
 </section>
 
 <section class="section" id="o-nas">
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow" data-en="Welcome">Vítejte</p>
+  <div class="wrap about">
+    <div class="about__text">
       <h2 data-en="Not a cellar. An airy pub in the city centre.">Žádný sklep. Vzdušná pivnice v centru.</h2>
       <p data-en="Welcome to Pub Podzemi, right in the heart of Brno, just below Špilberk Castle.">Vítejte v pivnici Pub Podzemi, která se nachází v krásném Brně-městě přímo v centru pod hradem Špilberk.</p>
       <p data-en="Don't let the name fool you – “podzemí” means underground, but this is no cellar. Quite the opposite: we went for an airy pub whose shop windows open up completely onto the newly renovated street. In summer, guests will enjoy the connection between the interior and the outdoors, as well as the planned terrace right in front of the pub.">Nenechte se zmást názvem, nejde o žádný sklep. Naopak – vsadili jsme na vzdušnou pivnici s možností plného otevření výloh do nově zrekonstruované ulice. V letních měsících tak hosté ocení příjemné propojení interiéru s venkovním prostředím i plánovanou zahrádku přímo před podnikem.</p>
     </div>
-    <img class="split__img" src="img/interier.jpg" alt="Interiér pivnice Pub Podzemi" data-en-alt="Interior of Pub Podzemi" loading="lazy">
+    <img class="arch about__img" src="img/interier.jpg" alt="Interiér pivnice Pub Podzemi pod bílými klenbami" data-en-alt="Pub Podzemi interior under white vaulted ceilings" loading="lazy">
   </div>
 
-  <div class="wrap cards">
-    <article class="card">
-      <span class="card__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M5 8h10v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8Z"/><path d="M15 10h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><path d="M5 8a2.5 2.5 0 0 1 2-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 3 4"/><path d="M8.5 12v5M11.5 12v5"/></svg>
-      </span>
+  <div class="wrap features">
+    <article class="feature">
+      <svg class="feature__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h10v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8Z"/><path d="M15 10h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><path d="M5 8a2.5 2.5 0 0 1 2-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 3 4"/><path d="M8.5 12v5M11.5 12v5"/></svg>
       <h3 data-en="Beer specials &amp; drinks">Pivní speciály i drinky</h3>
       <p data-en="On tap we have Pilsner Urquell and Radegast, complemented by specials from the Kosmix brewery. There's also Prosecco and a selection of quality wines by the glass and bottle. On hot summer days, our mixed drinks are a favourite.">Na čepu máme Plzeň a Radka doplněné o speciály z pivovaru Kosmix. Nechybí ani Prosecco a výběr kvalitních rozlévaných i lahvových vín. V letních horkých dnech ocení hosté i míchané drinky.</p>
     </article>
-    <article class="card">
-      <span class="card__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 2 2v9"/><path d="M10 3v7a2 2 0 0 1-2 2"/><path d="M8 3v6"/><path d="M17 21V3c-2 1-3 4-3 8h3"/></svg>
-      </span>
+    <article class="feature">
+      <svg class="feature__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v7a2 2 0 0 0 2 2v9"/><path d="M10 3v7a2 2 0 0 1-2 2"/><path d="M8 3v6"/><path d="M17 21V3c-2 1-3 4-3 8h3"/></svg>
       <h3 data-en="Something to eat">Něco na zub</h3>
       <p data-en="Roasted pork belly with a touch of Asian flavours, hearty beef goulash, duck rillettes and homemade focaccia. And of course classic open sandwiches – perfect with a beer.">Luxusní pečený bůček šmrncnutý asijskými chutěmi, poctivý hovězí guláš, kachní rillettes či domácí focaccia. Nechybí ani klasické obložené chleby ideální k pivku.</p>
     </article>
-    <article class="card">
-      <span class="card__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 18h16"/><path d="M6 18v-7M10 18v-7M14 18v-7M18 18v-7"/><path d="M3 9 12 4l9 5H3Z"/></svg>
-      </span>
+    <article class="feature">
+      <svg class="feature__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M4 18h16"/><path d="M6 18v-7M10 18v-7M14 18v-7M18 18v-7"/><path d="M3 9 12 4l9 5H3Z"/></svg>
       <h3 data-en="The tradition continues">Tradice pokračuje</h3>
       <p data-en="Just like our Cafe Podnebi, the interior was designed by architect Tomáš Pavlovský. The new pub builds on a long tradition while bringing a fresh food and drink experience.">Autorem interiéru je stejně jako v případě našeho Cafe Podnebi architekt Tomáš Pavlovský. Nový podnik navazuje na dlouholetou tradici a přináší svěží gastronomický zážitek.</p>
     </article>
@@ -114,24 +105,19 @@
 
 <section class="section section--alt" id="nabidka">
   <div class="wrap">
-    <p class="eyebrow" data-en="Menu">Nabídka</p>
     <h2 data-en="What will you have?">Co si dáte?</h2>
     <div class="menu">
       <a class="menu__item" href="jidelni-listek.html">
-        <img src="img/prkenko.jpg" alt="" class="menu__img" loading="lazy">
-        <span class="menu__body">
-          <span class="menu__title" data-en="Food menu">Jídelní lístek</span>
-          <span class="menu__desc" data-en="Podzemi pork belly, goulash, open sandwiches, olives, focaccia">Bůček Podzemi, guláš, obložené chleby, olivy, focaccia</span>
-          <span class="menu__cta" data-en="See the food →">Zobrazit jídla →</span>
-        </span>
+        <img src="img/prkenko.jpg" alt="" class="arch menu__img" loading="lazy">
+        <span class="menu__title" data-en="Food menu">Jídelní lístek</span>
+        <span class="menu__desc" data-en="Podzemi pork belly, goulash, open sandwiches, olives and focaccia">Bůček Podzemi, guláš, obložené chleby, olivy a focaccia</span>
+        <span class="menu__cta" data-en="See the food menu">Otevřít jídelní lístek</span>
       </a>
       <a class="menu__item" href="napojovy-listek.html">
-        <img src="img/chleby-pivo.jpg" alt="" class="menu__img" loading="lazy">
-        <span class="menu__body">
-          <span class="menu__title" data-en="Drinks menu">Nápojový lístek</span>
-          <span class="menu__desc" data-en="Pilsner Urquell, Radegast, Kosmix specials, wines, Prosecco, cocktails">Plzeň, Radegast, speciály Kosmix, vína, Prosecco, drinky</span>
-          <span class="menu__cta" data-en="See the drinks →">Zobrazit nápoje →</span>
-        </span>
+        <img src="img/chleby-pivo.jpg" alt="" class="arch menu__img" loading="lazy">
+        <span class="menu__title" data-en="Drinks menu">Nápojový lístek</span>
+        <span class="menu__desc" data-en="Pilsner Urquell, Radegast, Kosmix specials, wines, Prosecco and cocktails">Plzeň, Radegast, speciály Kosmix, vína, Prosecco a drinky</span>
+        <span class="menu__cta" data-en="See the drinks menu">Otevřít nápojový lístek</span>
       </a>
     </div>
   </div>
@@ -139,24 +125,21 @@
 
 <section class="section" id="galerie">
   <div class="wrap">
-    <p class="eyebrow" data-en="Gallery">Galerie</p>
     <h2 data-en="Take a look inside">Nahlédněte k nám</h2>
     <div class="gallery">
-      <img src="img/interier-2.jpg" alt="Bar a sál pivnice" data-en-alt="The bar and main room" loading="lazy">
+      <img class="gallery__big" src="img/interier-2.jpg" alt="Bar a sál pivnice" data-en-alt="The bar and main room" loading="lazy">
       <img src="img/chleby-pivo.jpg" alt="Obložené chleby a pivo" data-en-alt="Open sandwiches and beer" loading="lazy">
       <img src="img/prkenko.jpg" alt="Prkénko s paštikou a pečivem" data-en-alt="Board with pâté and bread" loading="lazy">
       <img src="img/chleby-2.jpg" alt="Obložené chleby s pomazánkami" data-en-alt="Open sandwiches with spreads" loading="lazy">
-      <img src="img/interier.jpg" alt="Interiér pivnice" data-en-alt="Pub interior" loading="lazy">
       <img src="img/chleby.jpg" alt="Obložené chleby a točené pivo" data-en-alt="Open sandwiches and draught beer" loading="lazy">
     </div>
   </div>
 </section>
 
 <section class="section section--alt" id="oteviraci-doba">
-  <div class="wrap split">
+  <div class="wrap hours-grid">
     <div>
-      <p class="eyebrow" data-en="Opening hours">Otevírací doba</p>
-      <h2 data-en="Every day from 3 pm to 1 am">Každý den od tří do jedné</h2>
+      <h2 data-en="Open every day from 3 pm to 1 am">Otevřeno každý den od tří do jedné</h2>
       <table class="hours">
         <tr><td data-en="Monday">Pondělí</td><td>15:00 – 01:00</td></tr>
         <tr><td data-en="Tuesday">Úterý</td><td>15:00 – 01:00</td></tr>
@@ -167,24 +150,25 @@
         <tr><td data-en="Sunday">Neděle</td><td>15:00 – 01:00</td></tr>
       </table>
     </div>
-    <div>
-      <h3 data-en="Our services">Naše služby</h3>
-      <ul class="tags">
-        <li data-en="Catering">Catering</li><li data-en="Outdoor seating">Venkovní posezení</li><li data-en="Private events">Soukromé akce</li><li data-en="Takeaway">Jídlo s sebou</li>
-        <li data-en="Wedding receptions">Svatební hostiny</li><li data-en="Free Wi‑Fi">Wi‑Fi zdarma</li><li data-en="Pets welcome">Mazlíčci vítáni</li>
+    <div class="services">
+      <h3 data-en="We also offer">U nás najdete také</h3>
+      <ul class="plain-list">
+        <li data-en="Catering">Catering</li>
+        <li data-en="Outdoor seating">Venkovní posezení</li>
+        <li data-en="Private events and wedding receptions">Soukromé akce a svatební hostiny</li>
+        <li data-en="Takeaway food">Jídlo s sebou</li>
+        <li data-en="Free Wi‑Fi">Wi‑Fi zdarma</li>
+        <li data-en="Pets are welcome">Mazlíčci jsou vítáni</li>
       </ul>
       <h3 data-en="Payment">Platba</h3>
-      <ul class="tags">
-        <li data-en="Cash">Hotovost</li><li data-en="Card">Karta</li><li data-en="Contactless">Bezkontaktně</li><li>Apple Pay</li>
-      </ul>
+      <p data-en="Cash, card, contactless and Apple Pay.">Hotovost, karta, bezkontaktně i Apple Pay.</p>
     </div>
   </div>
 </section>
 
 <section class="section" id="kontakt">
-  <div class="wrap split">
+  <div class="wrap contact-grid">
     <div>
-      <p class="eyebrow" data-en="Contact">Kontakt</p>
       <h2 data-en="Where to find us">Kde nás najdete</h2>
       <p class="contact">
         <strong>Pub Podzemi</strong><br>
@@ -207,12 +191,12 @@
 
 <footer class="footer">
   <div class="wrap footer__inner">
-    <span class="logo"><img src="img/logo.png" alt="" class="logo__img"><span class="logo__text">Pub <span>Podzemi</span></span></span>
-    <span data-en="Operator: Podnebi s.r.o. · Company ID 04577949 · Údolní 222/5, 602 00 Brno">Provozovatel: Podnebi s.r.o. · IČ 04577949 · Údolní 222/5, 602 00 Brno</span>
+    <span class="logo"><img src="img/logo.png" alt="" class="logo__img"><span class="logo__text">Pub Podzemi</span></span>
+    <span data-en="Operated by Podnebi s.r.o., company ID 04577949, Údolní 222/5, 602 00 Brno">Provozovatel: Podnebi s.r.o., IČ 04577949, Údolní 222/5, 602 00 Brno</span>
     <span>© <span class="year"></span></span>
   </div>
 </footer>
 
-<script src="main.js?v=7"></script>
+<script src="main.js?v=8"></script>
 </body>
 </html>

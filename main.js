@@ -201,8 +201,8 @@ function renderOpenStatus() {
   const open = h >= OPEN_HOUR || h < CLOSE_HOUR;
   const text = statusEl.querySelector('.hero__badge-text');
   const msg = {
-    cs: open ? 'Právě otevřeno · <strong>do 01:00</strong>' : 'Právě zavřeno · <strong>otevíráme v 15:00</strong>',
-    en: open ? 'Open now · <strong>until 1 am</strong>' : 'Closed now · <strong>opens at 3 pm</strong>'
+    cs: open ? 'Právě otevřeno, <strong>do 01:00</strong>' : 'Právě zavřeno, <strong>otevíráme v 15:00</strong>',
+    en: open ? 'Open now, <strong>until 1 am</strong>' : 'Closed now, <strong>opens at 3 pm</strong>'
   };
   statusEl.classList.toggle('is-closed', !open);
   // Uložíme obě jazykové verze, aby je přepínač jazyka správně vystřídal.
