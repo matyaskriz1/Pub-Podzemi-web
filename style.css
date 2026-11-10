@@ -2,7 +2,6 @@
   Pub Podzemi – vizuální styl
   Barvy: bílá omítka kleneb, černá z rámečku loga, zlatá z loga.
   Písmo: Big Shoulders Display (úzké jako písmena loga) + Instrument Sans.
-  Jediný výrazný motiv: oblouk klenby na fotkách.
 */
 :root {
   --plaster: #f5f4f0;      /* bílá omítka kleneb */
@@ -18,7 +17,6 @@
   --display: "Big Shoulders Display", "Arial Narrow", sans-serif;
   --body: "Instrument Sans", system-ui, sans-serif;
   --brand: "Fraunces", Georgia, serif;   /* písmo názvu Pub Podzemi */
-  --arch: 999px 999px 0 0 / 46% 46% 0 0;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -108,22 +106,12 @@ p + p { margin-top: .9rem; }
   @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
 }
 
-/* Rychlé informace pod úvodem */
-.info { border-bottom: 1px solid var(--line); background: var(--white); }
-.quick { display: grid; grid-template-columns: repeat(4, 1fr); }
-.quick > div { padding: 22px 24px 22px 0; }
-.quick > div + div { padding-left: 24px; border-left: 1px solid var(--line); }
-.quick dt { font-size: .85rem; color: var(--muted); }
-.quick dd { font-weight: 600; font-size: 1.05rem; }
-.quick a { text-decoration: none; }
-.quick a:hover { color: var(--gold-ink); }
-
 /* Sekce */
 .section { padding: clamp(80px, 11vw, 140px) 0; }
 .section--alt { background: var(--plaster-2); }
 
-/* Oblouk klenby – hlavní motiv */
-.arch { border-radius: var(--arch); object-fit: cover; width: 100%; background: var(--line); }
+/* Fotky – obdélníky s lehce zaoblenými rohy */
+.photo { border-radius: 4px; object-fit: cover; width: 100%; background: var(--line); }
 
 .about { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(40px, 7vw, 100px); align-items: end; }
 .about__text p { color: var(--muted); }
@@ -146,7 +134,7 @@ p + p { margin-top: .9rem; }
 /* Galerie – jedna velká fotka a čtyři menší */
 .gallery { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 10px; aspect-ratio: 2 / 1; }
 .gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 3px; background: var(--line); }
-.gallery__big { grid-row: span 2; border-radius: var(--arch) !important; }
+.gallery__big { grid-row: span 2; }
 
 /* Otevírací doba */
 .hours-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(40px, 7vw, 100px); }
@@ -227,9 +215,6 @@ p + p { margin-top: .9rem; }
   .about, .menu, .hours-grid, .contact-grid { grid-template-columns: 1fr; }
   .about__img { aspect-ratio: 4/3; }
   .features { grid-template-columns: 1fr; }
-  .quick { grid-template-columns: 1fr 1fr; }
-  .quick > div:nth-child(3) { padding-left: 0; border-left: 0; }
-  .quick > div:nth-child(n+3) { border-top: 1px solid var(--line); }
   .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto; aspect-ratio: auto; }
   .gallery img { aspect-ratio: 1; }
   .gallery__big { grid-column: span 2; grid-row: auto; aspect-ratio: 4/3 !important; }
@@ -241,8 +226,5 @@ p + p { margin-top: .9rem; }
   .logo__text { display: none; }
   .btn--small { padding: .45rem .8rem; font-size: .86rem; }
   .lang__btn { padding: .34rem .52rem; }
-  .quick { grid-template-columns: 1fr; }
-  .quick > div, .quick > div + div { padding: 16px 0; border-left: 0; }
-  .quick > div + div { border-top: 1px solid var(--line); }
   .hero__actions .btn { flex: 1 1 auto; text-align: center; }
 }
