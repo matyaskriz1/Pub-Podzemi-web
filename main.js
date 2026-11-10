@@ -168,6 +168,15 @@ let userScrolled = false;
   window.addEventListener(ev, () => { userScrolled = true; }, { once: true, passive: true }));
 window.addEventListener('load', () => { if (!userScrolled) initialScroll(); });
 
+/* ---------- Dlaždice s pivy: otočení klepnutím (mobil) nebo klávesnicí ---------- */
+const canHover = window.matchMedia('(hover: hover)');
+document.querySelectorAll('.flip').forEach(tile => tile.addEventListener('click', e => {
+  // Myší se dlaždice otáčí najetím (CSS); klik řešíme jen na dotykových zařízeních a z klávesnice.
+  if (canHover.matches && e.detail !== 0) return;
+  const flipped = tile.classList.toggle('is-flipped');
+  tile.setAttribute('aria-pressed', flipped);
+}));
+
 /* ---------- Rok v patičce ---------- */
 document.querySelectorAll('.year').forEach(el => { el.textContent = new Date().getFullYear(); });
 

@@ -117,9 +117,54 @@ p + p { margin-top: .9rem; }
 .about__text p { color: var(--muted); }
 .about__img { aspect-ratio: 4/5; }
 
-.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 4vw, 56px); margin-top: clamp(72px, 10vw, 120px); padding-top: clamp(40px, 5vw, 56px); border-top: 1px solid var(--line); }
-.feature__icon { width: 34px; height: 34px; margin-bottom: 1rem; fill: none; stroke: var(--gold-ink); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.feature p { color: var(--muted); font-size: .98rem; }
+/* Samostatné bloky pod „O nás“ */
+.block-head { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 80px); align-items: end; margin-bottom: clamp(36px, 5vw, 56px); }
+.block-head h2 { margin-bottom: 0; }
+.block-head p { color: var(--muted); font-size: 1.08rem; }
+
+/* Dlaždice s pivy – otočí se na text */
+.beers { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.5vw, 28px); }
+.flip { display: block; width: 100%; padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: pointer; perspective: 1400px; aspect-ratio: 4 / 5; min-height: 360px; }
+.flip__inner { position: relative; display: block; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.3,.7,.2,1); }
+.flip__front, .flip__back { position: absolute; inset: 0; display: flex; flex-direction: column; border-radius: 4px; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.flip__front { justify-content: flex-end; padding: 28px; color: var(--white); background: var(--tile, var(--ink)); }
+.flip__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.flip__front:has(.flip__img)::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.75) 100%); }
+.flip__name, .flip__kind, .flip__hint { position: relative; z-index: 1; }
+.flip__name { font-family: var(--brand); font-weight: 500; font-size: clamp(2rem, 3.2vw, 2.8rem); line-height: 1.05; }
+.flip__kind { margin-top: .4rem; font-size: 1rem; color: rgba(255,255,255,.85); }
+.flip__hint { margin-top: 1.4rem; align-self: flex-start; font-size: .88rem; font-weight: 600; padding-bottom: 2px; border-bottom: 1px solid rgba(255,255,255,.6); }
+.flip__back { transform: rotateY(180deg); padding: clamp(24px, 2.6vw, 32px); background: var(--white); border: 1px solid var(--line); overflow-y: auto; }
+.flip__back-title { font-family: var(--brand); font-weight: 500; font-size: 1.7rem; line-height: 1.1; margin-bottom: .9rem; padding-bottom: .7rem; border-bottom: 3px solid var(--tile, var(--ink)); }
+.flip__text { color: var(--muted); font-size: .98rem; line-height: 1.6; }
+.flip--plzen { --tile: #1f4a35; }
+.flip--radegast { --tile: #8e1c22; }
+.flip--kosmix { --tile: #1d2238; }
+.flip.is-flipped .flip__inner { transform: rotateY(180deg); }
+@media (hover: hover) {
+  .flip:hover .flip__inner { transform: rotateY(180deg); }
+}
+.flip:focus-visible { outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .flip__inner { transform: none !important; transition: none; }
+  .flip__front, .flip__back { backface-visibility: visible; transition: opacity .2s; }
+  .flip__back { transform: none; opacity: 0; }
+  .flip.is-flipped .flip__back { opacity: 1; }
+  @media (hover: hover) { .flip:hover .flip__back { opacity: 1; } }
+}
+
+/* Něco na zub – fotka vedle textu */
+.split-block { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 100px); align-items: center; }
+.split-block__img { aspect-ratio: 4 / 3; }
+.split-block__text p { color: var(--muted); font-size: 1.08rem; }
+.text-link { display: inline-block; margin-top: 1.4rem; font-weight: 600; color: var(--gold-ink); text-decoration: none; border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
+.text-link:hover { color: var(--ink); }
+
+/* Tradice – tmavý blok */
+.section--ink { background: var(--ink); color: var(--white); }
+.tradition { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(32px, 6vw, 90px); align-items: center; }
+.tradition h2 { margin-bottom: 0; }
+.tradition__text { font-family: var(--brand); font-size: clamp(1.35rem, 2.2vw, 1.8rem); line-height: 1.45; color: rgba(255,255,255,.9); max-width: 40ch; }
 
 /* Lístky na hlavní stránce */
 .menu { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); margin-top: 1rem; }
@@ -214,7 +259,9 @@ p + p { margin-top: .9rem; }
   .nav--overlay:not(.is-solid) .nav__links.open a { color: var(--muted); }
   .about, .menu, .hours-grid, .contact-grid { grid-template-columns: 1fr; }
   .about__img { aspect-ratio: 4/3; }
-  .features { grid-template-columns: 1fr; }
+  .block-head, .split-block, .tradition { grid-template-columns: 1fr; }
+  .beers { grid-template-columns: 1fr; }
+  .flip { aspect-ratio: auto; height: 380px; }
   .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto; aspect-ratio: auto; }
   .gallery img { aspect-ratio: 1; }
   .gallery__big { grid-column: span 2; grid-row: auto; aspect-ratio: 4/3 !important; }
