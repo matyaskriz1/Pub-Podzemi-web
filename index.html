@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Big+Shoulders+Display:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=21">
+  <link rel="stylesheet" href="style.css?v=22">
 </head>
 <body>
 
@@ -109,6 +109,11 @@
           </span>
         </span>
       </button>
+    </div>
+    <!-- Na telefonu se text o pivu po klepnutí ukáže tady pod dlaždicemi -->
+    <div class="beer-panel" hidden aria-live="polite">
+      <p class="beer-panel__title"></p>
+      <p class="beer-panel__text"></p>
     </div>
   </div>
 </section>
@@ -240,6 +245,6 @@
   </div>
 </footer>
 
-<script src="main.js?v=21"></script>
+<script src="main.js?v=22"></script>
 </body>
 </html>

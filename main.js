@@ -168,13 +168,41 @@ let userScrolled = false;
   window.addEventListener(ev, () => { userScrolled = true; }, { once: true, passive: true }));
 window.addEventListener('load', () => { if (!userScrolled) initialScroll(); });
 
-/* ---------- Dlaždice s pivy: otočení klepnutím (mobil) nebo klávesnicí ---------- */
+/* ---------- Dlaždice s pivy ---------- */
+// Počítač: dlaždice se otočí najetím myší (CSS).
+// Tablet a klávesnice: otočí se klepnutím / Enterem.
+// Telefon (úzká obrazovka): dlaždice zůstanou vedle sebe a text se ukáže v panelu pod nimi.
 const canHover = window.matchMedia('(hover: hover)');
-document.querySelectorAll('.flip').forEach(tile => tile.addEventListener('click', e => {
-  // Myší se dlaždice otáčí najetím (CSS); klik řešíme jen na dotykových zařízeních a z klávesnice.
+const narrow = window.matchMedia('(max-width: 640px)');
+const panel = document.querySelector('.beer-panel');
+const tiles = document.querySelectorAll('.flip');
+
+function showInPanel(tile) {
+  const wasActive = tile.classList.contains('is-active');
+  tiles.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-pressed', 'false'); });
+  if (wasActive) { panel.hidden = true; return; }
+  tile.classList.add('is-active');
+  tile.setAttribute('aria-pressed', 'true');
+  panel.querySelector('.beer-panel__title').textContent = tile.querySelector('.flip__back-title').textContent;
+  panel.querySelector('.beer-panel__text').textContent = tile.querySelector('.flip__text').textContent;
+  panel.style.setProperty('--tile', getComputedStyle(tile).getPropertyValue('--tile'));
+  panel.hidden = false;
+}
+
+tiles.forEach(tile => tile.addEventListener('click', e => {
+  if (narrow.matches && panel) return showInPanel(tile);
   if (canHover.matches && e.detail !== 0) return;
   const flipped = tile.classList.toggle('is-flipped');
   tile.setAttribute('aria-pressed', flipped);
+}));
+
+// Po přepnutí jazyka obnovit text v otevřeném panelu.
+document.querySelectorAll('.lang__btn').forEach(b => b.addEventListener('click', () => {
+  const active = document.querySelector('.flip.is-active');
+  if (active && panel && !panel.hidden) {
+    panel.querySelector('.beer-panel__title').textContent = active.querySelector('.flip__back-title').textContent;
+    panel.querySelector('.beer-panel__text').textContent = active.querySelector('.flip__text').textContent;
+  }
 }));
 
 /* ---------- Rok v patičce ---------- */

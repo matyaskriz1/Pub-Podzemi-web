@@ -280,11 +280,10 @@ p + p { margin-top: .9rem; }
   .nav__links a { width: 100%; padding: .75rem 0; font-size: 1.1rem; border-bottom: 1px solid var(--line); }
   .nav__links a[aria-current="page"] { border-bottom-color: var(--line); color: var(--gold-ink); }
   .nav--overlay:not(.is-solid) .nav__links.open a { color: var(--muted); }
-  .about, .menu, .hours-grid, .contact-grid { grid-template-columns: 1fr; }
+  .about, .hours-grid, .contact-grid { grid-template-columns: 1fr; }
   .about__img { aspect-ratio: 4/3; }
   .block-head, .split-block, .tradition { grid-template-columns: 1fr; }
-  .beers { grid-template-columns: 1fr; }
-  .flip { height: 300px; }
+  .menu { gap: 16px; }
   .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto; aspect-ratio: auto; }
   .gallery img { aspect-ratio: 1; }
   .gallery__big { grid-column: span 2; grid-row: auto; aspect-ratio: 4/3 !important; }
@@ -292,6 +291,27 @@ p + p { margin-top: .9rem; }
   .listek { padding-top: 100px; }
   .listek__grid { columns: 1; }
 }
+/* Telefon: dlaždice s pivy i lístky vedle sebe */
+@media (max-width: 640px) {
+  .beers { gap: 8px; }
+  .flip { height: 168px; perspective: none; }
+  .flip__inner { transform: none !important; transition: none; }
+  .flip__back { display: none; }
+  .flip__front { padding: 12px 10px; }
+  .flip__name { font-size: 1.05rem; line-height: 1.1; }
+  .flip__kind { font-size: .72rem; margin-top: .25rem; }
+  .flip__hint { font-size: .7rem; margin-top: .55rem; }
+  .flip.is-active .flip__front { box-shadow: inset 0 0 0 3px var(--gold); }
+  .beer-panel { margin-top: 10px; padding: 18px 18px 16px; background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--tile, var(--ink)); border-radius: 4px; }
+  .beer-panel[hidden] { display: none; }
+  .beer-panel__title { font-family: var(--brand); font-weight: 500; font-size: 1.3rem; margin-bottom: .4rem; }
+  .beer-panel__text { color: var(--muted); font-size: .95rem; line-height: 1.55; }
+  .menu__img { margin-bottom: .8rem; }
+  .menu__title { font-size: 1.35rem; }
+  .menu__desc { font-size: .84rem; line-height: 1.4; margin: .35rem 0 .6rem; }
+  .menu__cta { font-size: .84rem; }
+}
+@media (min-width: 641px) { .beer-panel { display: none !important; } }
 @media (max-width: 480px) {
   .hero__content { padding-bottom: 80px; }
   .logo__text { display: none; }
