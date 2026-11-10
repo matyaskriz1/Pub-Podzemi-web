@@ -199,7 +199,7 @@ p + p { margin-top: .9rem; }
 .services p { color: var(--muted); }
 
 /* Malé ikonky plateb pod otevírací dobou */
-.payments { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: clamp(36px, 5vw, 56px); padding-top: 24px; border-top: 1px solid var(--line); }
+.payments { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: clamp(36px, 5vw, 56px); padding-top: 24px; border-top: 1px solid var(--line); }
 .payments li { display: inline-flex; align-items: center; gap: 4px; height: 38px; padding: 0 10px 0 4px; background: var(--white); border: 1px solid var(--line); border-radius: 4px; font-size: .82rem; color: var(--muted); }
 .payments svg { width: 48px; height: 30px; flex-shrink: 0; }
 .payments li:has(.sr-only) { padding-right: 4px; }
