@@ -1,7 +1,7 @@
 # Web Pub Podzemi – poznámky k projektu
 
 Nový web pivnice Pub Podzemi (Údolní 222/5, Brno), náhrada za starý pubpodzemi.cz.
-Běží na GitHub Pages: https://matyaskriz1.github.io/moje-prvni-stranka/
+Běží na GitHub Pages: https://matyaskriz1.github.io/Pub-Podzemi-web/ (repozitář matyaskriz1/Pub-Podzemi-web, dříve moje-prvni-stranka)
 
 ## Soubory
 
@@ -27,7 +27,7 @@ Volba jazyka se pamatuje v prohlížeči.
 
 ## Vzhled (dohodnuté se zákazníkem)
 
-- Světlý, vzdušný styl; motiv oblouku klenby na fotkách (ne na mapě).
+- Světlý, vzdušný styl; všechny fotky obdélníkové/čtvercové (žádné oblouky).
 - Barvy: omítka `#f5f4f0`, černá `#161616`, zlatá z loga `#b89f2e`, rezervační tlačítka jantarová `#c8891f` s bílým textem.
 - Název „Pub Podzemi“ (úvod, logo v menu, patička) písmem **Fraunces**, jednobarevně, nikdy VELKÝMI PÍSMENY.
 - Ostatní nadpisy: Big Shoulders Display; text: Instrument Sans.
