@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Big+Shoulders+Display:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=18">
+  <link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
 
@@ -66,14 +66,11 @@
       <p data-en="On tap we have Pilsner Urquell and Radegast, complemented by specials from the Kosmix brewery. There's also Prosecco and a selection of quality wines by the glass and bottle. On hot summer days, our mixed drinks are a favourite.">Na čepu máme Plzeň a Radka doplněné o speciály z pivovaru Kosmix. Nechybí ani Prosecco a výběr kvalitních rozlévaných i lahvových vín. V letních horkých dnech ocení hosté i míchané drinky.</p>
     </div>
 
-    <!-- Dlaždice s pivy: po najetí myší (na mobilu klepnutím) se otočí na text.
-         Fotku přidáte do <span class="flip__front"> takto:
-         <img class="flip__img" src="img/piva/plzen.jpg" alt=""> -->
+    <!-- Dlaždice s pivy: po najetí myší (na mobilu klepnutím) se otočí na text. -->
     <div class="beers">
       <button type="button" class="flip flip--plzen" aria-pressed="false">
         <span class="flip__inner">
           <span class="flip__front">
-            <img class="flip__img" src="img/piva/plzen.jpg" alt="" loading="lazy" style="object-position: 50% 70%">
             <span class="flip__name">Pilsner Urquell</span>
             <span class="flip__kind" data-en="Pilsner lager 12°">Ležák 12°</span>
             <span class="flip__hint" data-en="More about this beer">Víc o pivu</span>
@@ -88,7 +85,6 @@
       <button type="button" class="flip flip--radegast" aria-pressed="false">
         <span class="flip__inner">
           <span class="flip__front">
-            <img class="flip__img" src="img/piva/radegast.jpg" alt="" loading="lazy" style="object-position: 50% 45%">
             <span class="flip__name">Radegast</span>
             <span class="flip__kind" data-en="Pale beer 10°">Desítka 10°</span>
             <span class="flip__hint" data-en="More about this beer">Víc o pivu</span>
@@ -103,7 +99,6 @@
       <button type="button" class="flip flip--kosmix" aria-pressed="false">
         <span class="flip__inner">
           <span class="flip__front">
-            <img class="flip__img" src="img/piva/kosmix.jpg" alt="" loading="lazy" style="object-position: 50% 40%">
             <span class="flip__name" data-en="Kosmix brewery">Pivovar Kosmix</span>
             <span class="flip__kind" data-en="Dry stout &amp; specials">Dry stout a speciály</span>
             <span class="flip__hint" data-en="More about this beer">Víc o pivu</span>
@@ -115,17 +110,25 @@
         </span>
       </button>
     </div>
-    <p class="credits" data-en="Photos: Jmcstrav (CC BY 2.5), JiriMatejicek (CC BY-SA 4.0), both via Wikimedia Commons; Eva Bronzini / Pexels. Photos are blurred.">Fotky: Jmcstrav (<a href="https://creativecommons.org/licenses/by/2.5/" target="_blank" rel="noopener">CC BY 2.5</a>), JiriMatejicek (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>), obě z Wikimedia Commons; Eva Bronzini / Pexels. Fotky jsou rozostřené.</p>
   </div>
 </section>
 
-<section class="section" id="jidlo">
-  <div class="wrap split-block">
-    <img class="photo split-block__img" src="img/chleby-2.jpg" alt="Obložené chleby s pomazánkami a točené pivo" data-en-alt="Open sandwiches with spreads and draught beer" loading="lazy">
-    <div class="split-block__text">
-      <h2 data-en="Something to eat">Něco na zub</h2>
-      <p data-en="Roasted pork belly with a touch of Asian flavours, hearty beef goulash, duck rillettes and homemade focaccia. And of course classic open sandwiches – perfect with a beer.">Luxusní pečený bůček šmrncnutý asijskými chutěmi, poctivý hovězí guláš, kachní rillettes či domácí focaccia. Nechybí ani klasické obložené chleby ideální k pivku.</p>
-      <a class="text-link" href="jidelni-listek.html" data-en="See the food menu">Otevřít jídelní lístek</a>
+<section class="section" id="nabidka">
+  <div class="wrap">
+    <h2 data-en="What will you have?">Co si dáte?</h2>
+    <div class="menu">
+      <a class="menu__item" href="jidelni-listek.html">
+        <img src="img/prkenko.jpg" alt="" class="photo menu__img" loading="lazy">
+        <span class="menu__title" data-en="Food menu">Jídelní lístek</span>
+        <span class="menu__desc" data-en="Pork belly, burger, goulash, focaccia and much more…">Bůček, burger, guláš, focaccia a mnoho dalšího…</span>
+        <span class="menu__cta" data-en="See the food menu">Otevřít jídelní lístek</span>
+      </a>
+      <a class="menu__item" href="napojovy-listek.html">
+        <img src="img/pivo.jpg" alt="" class="photo menu__img" loading="lazy">
+        <span class="menu__title" data-en="Drinks menu">Nápojový lístek</span>
+        <span class="menu__desc" data-en="Beer, quality wine and prosecco, mixed drinks and much more…">Pivo, kvalitní víno a prosecco, míchané drinky a mnoho dalšího…</span>
+        <span class="menu__cta" data-en="See the drinks menu">Otevřít nápojový lístek</span>
+      </a>
     </div>
   </div>
 </section>
@@ -134,26 +137,6 @@
   <div class="wrap tradition">
     <h2 data-en="The tradition continues">Tradice pokračuje</h2>
     <p class="tradition__text" data-en="Just like our Cafe Podnebi, the interior was designed by architect Tomáš Pavlovský. The new pub builds on a long tradition while bringing a fresh food and drink experience.">Autorem interiéru je stejně jako v případě našeho Cafe Podnebi architekt Tomáš Pavlovský. Nový podnik navazuje na dlouholetou tradici a přináší svěží gastronomický zážitek.</p>
-  </div>
-</section>
-
-<section class="section section--alt" id="nabidka">
-  <div class="wrap">
-    <h2 data-en="What will you have?">Co si dáte?</h2>
-    <div class="menu">
-      <a class="menu__item" href="jidelni-listek.html">
-        <img src="img/prkenko.jpg" alt="" class="photo menu__img" loading="lazy">
-        <span class="menu__title" data-en="Food menu">Jídelní lístek</span>
-        <span class="menu__desc" data-en="Podzemi pork belly, goulash, open sandwiches, olives and focaccia">Bůček Podzemi, guláš, obložené chleby, olivy a focaccia</span>
-        <span class="menu__cta" data-en="See the food menu">Otevřít jídelní lístek</span>
-      </a>
-      <a class="menu__item" href="napojovy-listek.html">
-        <img src="img/chleby-pivo.jpg" alt="" class="photo menu__img" loading="lazy">
-        <span class="menu__title" data-en="Drinks menu">Nápojový lístek</span>
-        <span class="menu__desc" data-en="Pilsner Urquell, Radegast, Kosmix specials, wines, Prosecco and cocktails">Plzeň, Radegast, speciály Kosmix, vína, Prosecco a drinky</span>
-        <span class="menu__cta" data-en="See the drinks menu">Otevřít nápojový lístek</span>
-      </a>
-    </div>
   </div>
 </section>
 
@@ -185,18 +168,30 @@
       </table>
     </div>
     <div class="services">
-      <h3 data-en="We also offer">U nás najdete také</h3>
+      <h3 data-en="Events &amp; catering">Akce a catering</h3>
       <ul class="plain-list">
+        <li data-en="Private events and celebrations">Soukromé akce a oslavy</li>
+        <li data-en="Wedding receptions">Svatební hostiny</li>
         <li data-en="Catering">Catering</li>
-        <li data-en="Outdoor seating">Venkovní posezení</li>
-        <li data-en="Private events and wedding receptions">Soukromé akce a svatební hostiny</li>
         <li data-en="Takeaway food">Jídlo s sebou</li>
+      </ul>
+      <h3 data-en="Good to know">Dobré vědět</h3>
+      <ul class="plain-list">
+        <li data-en="Outdoor seating">Venkovní posezení</li>
         <li data-en="Free Wi‑Fi">Wi‑Fi zdarma</li>
         <li data-en="Pets are welcome">Mazlíčci jsou vítáni</li>
       </ul>
-      <h3 data-en="Payment">Platba</h3>
-      <p data-en="Cash, card, contactless and Apple Pay.">Hotovost, karta, bezkontaktně i Apple Pay.</p>
     </div>
+  </div>
+  <div class="wrap">
+    <ul class="payments" aria-label="Způsoby platby" data-en-aria-label="Payment methods">
+      <li title="Hotovost" data-en-title="Cash"><svg viewBox="0 0 48 30" aria-hidden="true"><rect x="5" y="8" width="38" height="16" rx="2" fill="none" stroke="#3d7a4a" stroke-width="2"/><circle cx="24" cy="16" r="4" fill="none" stroke="#3d7a4a" stroke-width="2"/><path d="M10 12v8M38 12v8" stroke="#3d7a4a" stroke-width="2"/></svg><span data-en="Cash">Hotovost</span></li>
+      <li title="Bezkontaktně" data-en-title="Contactless"><svg viewBox="0 0 48 30" aria-hidden="true"><g fill="none" stroke="#161616" stroke-width="2.2" stroke-linecap="round"><path d="M17 9c2.5 4 2.5 8 0 12"/><path d="M22 6.5c3.6 5.5 3.6 11.5 0 17"/><path d="M27 4c4.8 7 4.8 15 0 22"/></g></svg><span data-en="Contactless">Bezkontaktně</span></li>
+      <li title="Visa"><svg viewBox="0 0 48 30" aria-hidden="true"><text x="24" y="20.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" font-style="italic" fill="#1a1f71" letter-spacing=".5">VISA</text></svg><span class="sr-only">Visa</span></li>
+      <li title="Mastercard"><svg viewBox="0 0 48 30" aria-hidden="true"><circle cx="19.5" cy="15" r="9" fill="#eb001b"/><circle cx="28.5" cy="15" r="9" fill="#f79e1b"/><path d="M24 7.2a9 9 0 0 1 0 15.6a9 9 0 0 1 0-15.6z" fill="#ff5f00"/></svg><span class="sr-only">Mastercard</span></li>
+      <li title="Maestro"><svg viewBox="0 0 48 30" aria-hidden="true"><circle cx="19.5" cy="15" r="9" fill="#eb001b"/><circle cx="28.5" cy="15" r="9" fill="#00a2e5"/><path d="M24 7.2a9 9 0 0 1 0 15.6a9 9 0 0 1 0-15.6z" fill="#7375cf"/></svg><span class="sr-only">Maestro</span></li>
+      <li title="Apple Pay"><svg viewBox="0 0 48 30" aria-hidden="true"><text x="24" y="19.5" text-anchor="middle" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="8.6" font-weight="600" fill="#000">Apple Pay</text></svg><span class="sr-only">Apple Pay</span></li>
+    </ul>
   </div>
 </section>
 
@@ -231,6 +226,6 @@
   </div>
 </footer>
 
-<script src="main.js?v=18"></script>
+<script src="main.js?v=19"></script>
 </body>
 </html>

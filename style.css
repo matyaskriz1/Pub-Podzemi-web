@@ -127,8 +127,6 @@ p + p { margin-top: .9rem; }
 .section--compact h2 { font-size: clamp(2rem, 4vw, 3rem); }
 .section--compact .block-head { margin-bottom: 28px; }
 .section--compact .block-head p { font-size: 1rem; }
-.credits { margin-top: 14px; font-size: .78rem; color: var(--muted); max-width: none; }
-.credits a { color: inherit; }
 
 /* Dlaždice s pivy – otočí se na text */
 .beers { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.5vw, 28px); }
@@ -199,6 +197,13 @@ p + p { margin-top: .9rem; }
 .plain-list { list-style: none; color: var(--muted); }
 .plain-list li { padding: .3rem 0; }
 .services p { color: var(--muted); }
+
+/* Malé ikonky plateb pod otevírací dobou */
+.payments { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: clamp(36px, 5vw, 56px); padding-top: 24px; border-top: 1px solid var(--line); }
+.payments li { display: inline-flex; align-items: center; gap: 4px; height: 38px; padding: 0 10px 0 4px; background: var(--white); border: 1px solid var(--line); border-radius: 4px; font-size: .82rem; color: var(--muted); }
+.payments svg { width: 48px; height: 30px; flex-shrink: 0; }
+.payments li:has(.sr-only) { padding-right: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 /* Kontakt */
 .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 7vw, 100px); align-items: start; }
