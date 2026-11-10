@@ -122,21 +122,29 @@ p + p { margin-top: .9rem; }
 .block-head h2 { margin-bottom: 0; }
 .block-head p { color: var(--muted); font-size: 1.08rem; }
 
+/* Kompaktní sekce s pivy */
+.section--compact { padding: clamp(56px, 7vw, 84px) 0; }
+.section--compact h2 { font-size: clamp(2rem, 4vw, 3rem); }
+.section--compact .block-head { margin-bottom: 28px; }
+.section--compact .block-head p { font-size: 1rem; }
+.credits { margin-top: 14px; font-size: .78rem; color: var(--muted); max-width: none; }
+.credits a { color: inherit; }
+
 /* Dlaždice s pivy – otočí se na text */
 .beers { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.5vw, 28px); }
-.flip { display: block; width: 100%; padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: pointer; perspective: 1400px; aspect-ratio: 4 / 5; min-height: 360px; }
+.flip { display: block; width: 100%; padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: pointer; perspective: 1400px; height: 280px; }
 .flip__inner { position: relative; display: block; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.3,.7,.2,1); }
 .flip__front, .flip__back { position: absolute; inset: 0; display: flex; flex-direction: column; border-radius: 4px; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
-.flip__front { justify-content: flex-end; padding: 28px; color: var(--white); background: var(--tile, var(--ink)); }
+.flip__front { justify-content: flex-end; padding: 22px; color: var(--white); background: var(--tile, var(--ink)); }
 .flip__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.flip__front:has(.flip__img)::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.75) 100%); }
+.flip__front:has(.flip__img)::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.72) 100%); }
 .flip__name, .flip__kind, .flip__hint { position: relative; z-index: 1; }
-.flip__name { font-family: var(--brand); font-weight: 500; font-size: clamp(2rem, 3.2vw, 2.8rem); line-height: 1.05; }
-.flip__kind { margin-top: .4rem; font-size: 1rem; color: rgba(255,255,255,.85); }
-.flip__hint { margin-top: 1.4rem; align-self: flex-start; font-size: .88rem; font-weight: 600; padding-bottom: 2px; border-bottom: 1px solid rgba(255,255,255,.6); }
-.flip__back { transform: rotateY(180deg); padding: clamp(24px, 2.6vw, 32px); background: var(--white); border: 1px solid var(--line); overflow-y: auto; }
-.flip__back-title { font-family: var(--brand); font-weight: 500; font-size: 1.7rem; line-height: 1.1; margin-bottom: .9rem; padding-bottom: .7rem; border-bottom: 3px solid var(--tile, var(--ink)); }
-.flip__text { color: var(--muted); font-size: .98rem; line-height: 1.6; }
+.flip__name { font-family: var(--brand); font-weight: 500; font-size: clamp(1.6rem, 2.2vw, 2rem); line-height: 1.05; }
+.flip__kind { margin-top: .3rem; font-size: .92rem; color: rgba(255,255,255,.85); }
+.flip__hint { margin-top: .9rem; align-self: flex-start; font-size: .88rem; font-weight: 600; padding-bottom: 2px; border-bottom: 1px solid rgba(255,255,255,.6); }
+.flip__back { transform: rotateY(180deg); padding: 20px 22px; background: var(--white); border: 1px solid var(--line); overflow-y: auto; }
+.flip__back-title { font-family: var(--brand); font-weight: 500; font-size: 1.3rem; line-height: 1.1; margin-bottom: .6rem; padding-bottom: .5rem; border-bottom: 3px solid var(--tile, var(--ink)); }
+.flip__text { color: var(--muted); font-size: .88rem; line-height: 1.5; }
 .flip--plzen { --tile: #1f4a35; }
 .flip--radegast { --tile: #8e1c22; }
 .flip--kosmix { --tile: #1d2238; }
@@ -261,7 +269,7 @@ p + p { margin-top: .9rem; }
   .about__img { aspect-ratio: 4/3; }
   .block-head, .split-block, .tradition { grid-template-columns: 1fr; }
   .beers { grid-template-columns: 1fr; }
-  .flip { aspect-ratio: auto; height: 380px; }
+  .flip { height: 300px; }
   .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto; aspect-ratio: auto; }
   .gallery img { aspect-ratio: 1; }
   .gallery__big { grid-column: span 2; grid-row: auto; aspect-ratio: 4/3 !important; }
