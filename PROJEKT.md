@@ -10,6 +10,8 @@ Běží na GitHub Pages: https://matyaskriz1.github.io/Pub-Podzemi-web/ (repozit
 | `index.html` | Hlavní stránka (úvod s fotkou, o nás, nabídka, galerie, otevírací doba, kontakt) |
 | `jidelni-listek.html`, `napojovy-listek.html` | Lístky – **needitovat ručně**, generují se skriptem níže |
 | `tools/generuj-listky.py` | Data lístků (názvy CZ/EN, ceny) a generátor obou stránek lístků |
+| `ochrana-osobnich-udaju.html` | Stránka Ochrana osobních údajů (CZ/EN), odkaz v patičce všech stránek |
+| `fonts.css`, `fonts/` | Písma uložená přímo na webu (nic se nenačítá z Google Fonts) |
 | `style.css` | Veškerý vzhled |
 | `main.js` | Přepínač CZ/EN, rezervační okno, okénko „právě otevřeno/zavřeno“, menu, posouvání |
 | `img/` | Fotky a logo; `bar-1440.jpg`/`bar-2560.jpg` (úvod), `pivo.jpg` (výřez piva pro nápojový lístek), `burger.jpg`, `olivy.jpg`, `polevka.jpg` (z Instagramu) – vše zostřené AI Real-ESRGAN |
@@ -49,6 +51,13 @@ Volba jazyka se pamatuje v prohlížeči.
 6. Galerie – velká fotka + 4 menší, pod tím řádek se 3 fotkami jídel
 7. Otevírací doba + „Dobré vědět“ (jeden seznam) + ikonky plateb na střed (hotovost, bezkontaktně, Visa, Mastercard, Maestro, Apple Pay, Google Pay)
 8. Kontakt + mapa (obdélník) + dlaždice Instagram (instagram.com/pubpodzemi) a Facebook
+
+## Soukromí a cookies
+
+- Web nepoužívá žádné cookies ani analytiku, proto nepotřebuje lištu se souhlasem s cookies.
+- Do prohlížeče ukládá jen zvolený jazyk (localStorage) a zavření okénka „Právě otevřeno“ (sessionStorage).
+- Mapa Google se načte až po kliknutí na „Zobrazit mapu“; do té doby web nekontaktuje žádný cizí server.
+- Při přidání analytiky, vložených příspěvků z Instagramu apod. je potřeba lišta se souhlasem a úprava stránky Ochrana osobních údajů.
 
 ## Otevřené nápady
 

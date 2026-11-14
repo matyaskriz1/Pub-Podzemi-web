@@ -223,6 +223,24 @@ p + p { margin-top: .9rem; }
 .social svg { width: 22px; height: 22px; }
 .social--ig { background: linear-gradient(45deg, #f09433, #dc2743 50%, #bc1888); }
 .social--fb { background: #1877f2; }
+.map--consent { display: grid; place-items: center; text-align: center; border: 1px solid var(--line); }
+.map__inner { display: flex; flex-direction: column; align-items: center; gap: .8rem; padding: 24px; max-width: 360px; }
+.map__pin { width: 40px; height: 40px; fill: none; stroke: var(--gold-ink); stroke-width: 1.6; }
+.map__addr { font-weight: 600; font-size: 1.1rem; }
+.map__note { font-size: .82rem; color: var(--muted); }
+.footer__link { color: inherit; }
+.footer__link:hover { color: var(--white); }
+
+/* Stránka Ochrana osobních údajů */
+.legal { padding: 140px 0 clamp(80px, 10vw, 130px); }
+.legal .wrap { max-width: 760px; }
+.legal h1 { font-size: clamp(2.6rem, 6vw, 4rem); margin-bottom: 1.6rem; }
+.legal h2 { max-width: none; font-size: 1.8rem; margin: 2.4rem 0 .8rem; }
+.legal ul + p { margin-top: .9rem; }
+.legal p, .legal li { color: var(--muted); }
+.legal ul { padding-left: 1.2rem; margin-top: .6rem; }
+.legal li + li { margin-top: .35rem; }
+.legal a { color: var(--gold-ink); }
 .map { width: 100%; aspect-ratio: 4/3; border: 0; border-radius: 4px; background: var(--plaster-2); }
 
 /* Patička */

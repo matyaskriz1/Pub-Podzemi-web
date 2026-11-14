@@ -6,10 +6,8 @@
   <title data-en="Pub Podzemi – beer pub in Brno city centre below Špilberk">Pub Podzemi – pivnice v centru Brna pod Špilberkem</title>
   <meta name="description" content="Pivnice Pub Podzemi v Brně, Údolní 5. Plzeň, Radegast a speciály z pivovaru Kosmix, kvalitní vína a poctivá kuchyně. Otevřeno denně 15:00–01:00." data-en-content="Pub Podzemi beer pub in Brno, Údolní 5. Pilsner Urquell, Radegast and Kosmix specials, quality wines and honest food. Open daily 3 pm – 1 am.">
   <link rel="icon" href="img/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Big+Shoulders+Display:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=23">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="style.css?v=24">
 </head>
 <body>
 
@@ -231,8 +229,15 @@
         </a>
       </div>
     </div>
-    <iframe class="map" title="Mapa – Údolní 222/5, Brno" data-en-title="Map – Údolní 222/5, Brno" loading="lazy"
-      src="https://maps.google.com/maps?q=%C3%9Adoln%C3%AD%20222%2F5%2C%20Brno&z=16&output=embed"></iframe>
+    <!-- Mapa Google se načte až po kliknutí (do té doby žádné cookies od Googlu) -->
+    <div class="map map--consent" data-src="https://maps.google.com/maps?q=%C3%9Adoln%C3%AD%20222%2F5%2C%20Brno&amp;z=16&amp;output=embed">
+      <div class="map__inner">
+        <svg class="map__pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <p class="map__addr">Údolní 222/5, Brno</p>
+        <button type="button" class="btn btn--ghost js-map" data-en="Show map">Zobrazit mapu</button>
+        <p class="map__note" data-en="The map is provided by Google. Google may store cookies once it is shown.">Mapu poskytuje Google. Po zobrazení může Google ukládat cookies.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -240,10 +245,10 @@
   <div class="wrap footer__inner">
     <span class="logo"><img src="img/logo.png" alt="" class="logo__img"><span class="logo__text">Pub Podzemi</span></span>
     <span data-en="Operated by Podnebi s.r.o., company ID 04577949, Údolní 222/5, 602 00 Brno">Provozovatel: Podnebi s.r.o., IČ 04577949, Údolní 222/5, 602 00 Brno</span>
-    <span>© <span class="year"></span></span>
+    <span>© <span class="year"></span> · <a href="ochrana-osobnich-udaju.html" class="footer__link" data-en="Privacy">Ochrana osobních údajů</a></span>
   </div>
 </footer>
 
-<script src="main.js?v=23"></script>
+<script src="main.js?v=24"></script>
 </body>
 </html>

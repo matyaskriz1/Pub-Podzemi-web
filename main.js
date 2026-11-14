@@ -205,6 +205,16 @@ document.querySelectorAll('.lang__btn').forEach(b => b.addEventListener('click',
   }
 }));
 
+/* ---------- Mapa až po kliknutí ---------- */
+document.querySelectorAll('.js-map').forEach(btn => btn.addEventListener('click', () => {
+  const box = btn.closest('.map--consent');
+  const frame = document.createElement('iframe');
+  frame.className = 'map';
+  frame.title = currentLang === 'en' ? 'Map – Údolní 222/5, Brno' : 'Mapa – Údolní 222/5, Brno';
+  frame.src = box.dataset.src;
+  box.replaceWith(frame);
+}));
+
 /* ---------- Rok v patičce ---------- */
 document.querySelectorAll('.year').forEach(el => { el.textContent = new Date().getFullYear(); });
 
