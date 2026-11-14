@@ -12,7 +12,7 @@ Běží na GitHub Pages: https://matyaskriz1.github.io/Pub-Podzemi-web/ (repozit
 | `tools/generuj-listky.py` | Data lístků (názvy CZ/EN, ceny) a generátor obou stránek lístků |
 | `style.css` | Veškerý vzhled |
 | `main.js` | Přepínač CZ/EN, rezervační okno, okénko „právě otevřeno/zavřeno“, menu, posouvání |
-| `img/` | Fotky a logo; `bar-1440.jpg`/`bar-2560.jpg` (úvod), `pivo.jpg` (výřez piva pro nápojový lístek), `burger.jpg`, `olivy.jpg`, `polevka.jpg` (z Instagramu) – vše zostřené AI Real-ESRGAN |
+| `img/` | Logo `logo-hd.png` (původní logo ze starého webu zvětšené AI; `logo.png` je originál 54×100 px) a fotky; `bar-1440.jpg`/`bar-2560.jpg` (úvod), `pivo.jpg` (výřez piva pro nápojový lístek), `burger.jpg`, `olivy.jpg`, `polevka.jpg` (z Instagramu) – vše zostřené AI Real-ESRGAN |
 
 ## Jak upravit lístky (ceny, položky)
 
