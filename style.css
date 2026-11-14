@@ -70,7 +70,6 @@ p + p { margin-top: .9rem; }
 .nav--overlay:not(.is-solid) .logo__text,
 .nav--overlay:not(.is-solid) .nav__links a,
 .nav--overlay:not(.is-solid) .nav__toggle { color: var(--white); }
-.nav--overlay:not(.is-solid) .logo__img { background: var(--white); border-radius: 3px; padding: 3px; }
 .nav--overlay:not(.is-solid) .lang { border-color: rgba(255,255,255,.55); }
 .nav--overlay:not(.is-solid) .lang__btn { color: rgba(255,255,255,.85); }
 .nav--overlay:not(.is-solid) .lang__btn.is-active { background: var(--white); color: var(--ink); }
@@ -82,7 +81,7 @@ p + p { margin-top: .9rem; }
   radial-gradient(ellipse 70% 60% at 50% 55%, rgba(10,10,10,.62) 0%, rgba(10,10,10,.25) 100%),
   linear-gradient(180deg, rgba(10,10,10,.5) 0%, rgba(10,10,10,0) 20%, rgba(10,10,10,0) 70%, rgba(10,10,10,.55) 100%); }
 .hero__content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding: 110px 0 90px; }
-.hero__logo { height: clamp(72px, 9vw, 104px); width: auto; background: var(--white); padding: 8px 10px; border-radius: 4px; margin-bottom: 1.2rem; }
+.hero__logo { height: clamp(96px, 11vw, 132px); width: auto; margin-bottom: 1.4rem; filter: drop-shadow(0 4px 14px rgba(0,0,0,.45)); }
 .hero h1 { font-family: var(--brand); text-transform: none; font-weight: 500; font-size: clamp(3.8rem, 11vw, 8.6rem); line-height: 1; letter-spacing: -.01em; text-shadow: 0 6px 40px rgba(0,0,0,.35); }
 .hero__lead { font-size: clamp(1.1rem, 1.8vw, 1.35rem); max-width: 40ch; margin: 1.2rem auto 1.8rem; color: rgba(255,255,255,.92); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .75rem; }
@@ -229,7 +228,7 @@ p + p { margin-top: .9rem; }
 .footer { background: var(--ink); color: rgba(255,255,255,.7); padding: 32px 0; font-size: .9rem; }
 .footer__inner { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; justify-content: space-between; }
 .footer .logo { color: var(--white); }
-.footer .logo__img { background: var(--white); border-radius: 3px; padding: 3px; height: 40px; }
+.footer .logo__img { height: 48px; }
 
 /* Rezervační okno */
 .modal { margin: auto; width: min(460px, calc(100% - 32px)); border: 0; border-radius: 6px; padding: 34px 28px 28px; background: var(--plaster); color: var(--ink); box-shadow: 0 30px 80px -20px rgba(0,0,0,.5); }

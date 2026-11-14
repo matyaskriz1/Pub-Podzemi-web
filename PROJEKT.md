@@ -12,7 +12,7 @@ Běží na GitHub Pages: https://matyaskriz1.github.io/Pub-Podzemi-web/ (repozit
 | `tools/generuj-listky.py` | Data lístků (názvy CZ/EN, ceny) a generátor obou stránek lístků |
 | `style.css` | Veškerý vzhled |
 | `main.js` | Přepínač CZ/EN, rezervační okno, okénko „právě otevřeno/zavřeno“, menu, posouvání |
-| `img/` | Fotky a logo; `bar-1440.jpg`/`bar-2560.jpg` (úvod), `pivo.jpg` (výřez piva pro nápojový lístek), `burger.jpg`, `olivy.jpg`, `polevka.jpg` (z Instagramu) – vše zostřené AI Real-ESRGAN |
+| `img/` | Logo `logo.svg` (překreslené vektorově, ostré v každé velikosti; `logo.png` je původní malá verze jen jako záloha ikonky) a fotky; `bar-1440.jpg`/`bar-2560.jpg` (úvod), `pivo.jpg` (výřez piva pro nápojový lístek), `burger.jpg`, `olivy.jpg`, `polevka.jpg` (z Instagramu) – vše zostřené AI Real-ESRGAN |
 
 ## Jak upravit lístky (ceny, položky)
 
@@ -57,7 +57,6 @@ Volba jazyka se pamatuje v prohlížeči.
 - Doplnit informace o pivovaru Kosmix (text na dlaždici vychází jen z lístku).
 
 - Online rezervační systém (zatím jen telefon).
-- Logo ve vyšším rozlišení (teď jen 54 × 100 px ze starého webu).
 - Nová úvodní fotka přímo z pivnice by byla ostřejší než zvětšená AI.
 - Případně sjednotit ostatní nadpisy na písmo Fraunces.
 - Připojit doménu pubpodzemi.cz na GitHub Pages.
