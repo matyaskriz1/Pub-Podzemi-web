@@ -86,7 +86,7 @@ def t(tag,cls,cs,en,extra=''):
 
 NAV='''<header class="nav" id="top">
   <div class="wrap nav__inner">
-    <a href="index.html" class="logo"><img src="img/logo-hd.png" alt="" class="logo__img"><span class="logo__text">Pub Podzemi</span></a>
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="" class="logo__img"><span class="logo__text">Pub Podzemi</span></a>
     <nav class="nav__links">
       <a href="jidelni-listek.html" data-en="Food"{food}>Jídlo</a>
       <a href="napojovy-listek.html" data-en="Drinks"{drinks}>Nápoje</a>
@@ -130,11 +130,11 @@ def page(fn,title,lead,data,active,note):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-en="{e(title[1])} – Pub Podzemi">{e(title[0])} – Pub Podzemi</title>
   <meta name="description" content="{e(title[0])} pivnice Pub Podzemi, Údolní 222/5, Brno." data-en-content="{e(title[1])} of Pub Podzemi, Údolní 222/5, Brno.">
-  <link rel="icon" href="img/logo-hd.png">
+  <link rel="icon" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Big+Shoulders+Display:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=25">
+  <link rel="stylesheet" href="style.css?v=23">
 </head>
 <body>
 
@@ -157,13 +157,13 @@ def page(fn,title,lead,data,active,note):
 
 <footer class="footer">
   <div class="wrap footer__inner">
-    <span class="logo"><img src="img/logo-hd.png" alt="" class="logo__img"><span class="logo__text">Pub Podzemi</span></span>
+    <span class="logo"><img src="img/logo.png" alt="" class="logo__img"><span class="logo__text">Pub Podzemi</span></span>
     <span data-en="Operator: Podnebi s.r.o., Company ID 04577949, Údolní 222/5, 602 00 Brno">Provozovatel: Podnebi s.r.o., IČ 04577949, Údolní 222/5, 602 00 Brno</span>
     <span>© <span class="year"></span></span>
   </div>
 </footer>
 
-<script src="main.js?v=25"></script>
+<script src="main.js?v=23"></script>
 </body>
 </html>
 '''
