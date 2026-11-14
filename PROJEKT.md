@@ -48,11 +48,10 @@ Volba jazyka se pamatuje v prohlížeči.
 5. „Tradice pokračuje“ – tmavý blok
 6. Galerie – velká fotka + 4 menší, pod tím řádek se 3 fotkami jídel
 7. Otevírací doba + „Dobré vědět“ (jeden seznam) + ikonky plateb na střed (hotovost, bezkontaktně, Visa, Mastercard, Maestro, Apple Pay, Google Pay)
-8. Kontakt + mapa (obdélník) + dlaždice Instagram/Facebook (**skryté** – viz níže)
+8. Kontakt + mapa (obdélník) + dlaždice Instagram (instagram.com/pubpodzemi) a Facebook
 
 ## Otevřené nápady
 
-- **Instagram a Facebook:** v `index.html` u `<div class="socials" hidden>` doplnit adresy profilů místo `INSTAGRAM_URL` a `FACEBOOK_URL` a smazat `hidden`. Adresy musí dodat zákazník.
 - Další fotky z Instagramu do galerie – zákazník je stáhne a pošle (Instagram nejde stahovat z prostředí).
 - Vlastní fotky piv na dlaždice (fotky značek z internetu nechtěl).
 - Doplnit informace o pivovaru Kosmix (text na dlaždici vychází jen z lístku).
